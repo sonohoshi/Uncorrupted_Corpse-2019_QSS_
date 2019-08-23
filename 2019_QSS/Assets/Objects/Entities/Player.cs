@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    // Start is called before the first frame update
-    void Start()
+    protected void UseWeapon()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Move();
-    }
-
-    public override void Move()
+    protected void Inventory()
     {
 
     }
