@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : Objects
+
+public class Entity :MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //protected Transform transform;
+    protected float hp;
+    protected float speed;
+    protected float DP;
+    protected float Power;
+
+    protected void Move()
+    {
+
+    }
+
+    protected void Attack()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void Begin()
     {
+        hp = 50;
         
-    }
-
-    // This will be Implemented on derived classes 
-    public virtual void Move()
-    {
-
     }
 }
