@@ -68,6 +68,9 @@
     <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
     <Compile Include="Assets\Objects\Items\Items.cs" />
     <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
+    <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />
+    <Compile Include="Assets\Objects\Structures\Food_Depot\TakeFood.cs" />
     <Compile Include="Assets\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
