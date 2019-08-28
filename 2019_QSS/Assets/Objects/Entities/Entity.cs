@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity
+
+public class Entity :MonoBehaviour
 {
-    protected Transform transform;
+    //protected Transform transform;
     protected float hp;
     protected float speed;
     protected float DP;
@@ -17,7 +18,12 @@ public class Entity
 
     protected void Attack()
     {
-
+        
     }
 
+    protected void Begin()
+    {
+        hp = 50;
+        
+    }
 }
