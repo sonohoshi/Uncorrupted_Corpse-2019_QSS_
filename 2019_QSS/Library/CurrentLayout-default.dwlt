@@ -16,8 +16,13 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 357
     y: 110
+=======
+    x: 0
+    y: 43.2
+>>>>>>> parent of a97b07a... migration complete
 =======
     x: 0
     y: 43.2
@@ -86,7 +91,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 124
+=======
+  controlID: 105
+>>>>>>> parent of a97b07a... migration complete
 =======
   controlID: 105
 >>>>>>> parent of a97b07a... migration complete
@@ -240,7 +249,11 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 37
+=======
+  controlID: 106
+>>>>>>> parent of a97b07a... migration complete
 =======
   controlID: 106
 >>>>>>> parent of a97b07a... migration complete
@@ -273,7 +286,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 38
+=======
+  controlID: 107
+>>>>>>> parent of a97b07a... migration complete
 =======
   controlID: 107
 >>>>>>> parent of a97b07a... migration complete
@@ -424,8 +441,13 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 357
     y: 639
+=======
+    x: 0
+    y: 572
+>>>>>>> parent of a97b07a... migration complete
 =======
     x: 0
     y: 572
@@ -452,11 +474,19 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Objects
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Objects
+=======
+    - Assets/Objects/Items/Armor
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Objects/Items/Armor
+>>>>>>> parent of a97b07a... migration complete
 =======
     - Assets/Objects/Items/Armor
   m_ViewMode: 1
@@ -479,9 +509,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 58500000
     m_LastClickedID: 20568
     m_ExpandedIDs: 00000000c04b000000ca9a3b
+=======
+    m_SelectedIDs: 58330000
+    m_LastClickedID: 13144
+    m_ExpandedIDs: 00000000a62d00001e310000903100002433000000ca9a3b
+>>>>>>> parent of a97b07a... migration complete
 =======
     m_SelectedIDs: 58330000
     m_LastClickedID: 13144
@@ -521,7 +557,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 
+=======
+    m_ExpandedIDs: 00000000a62d0000
+>>>>>>> parent of a97b07a... migration complete
 =======
     m_ExpandedIDs: 00000000a62d0000
 >>>>>>> parent of a97b07a... migration complete
@@ -606,8 +646,13 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1452
     y: 140
+=======
+    x: 1095.2001
+    y: 73.6
+>>>>>>> parent of a97b07a... migration complete
 =======
     x: 1095.2001
     y: 73.6
@@ -652,8 +697,13 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 979
     y: 140
+=======
+    x: 622.4
+    y: 73.6
+>>>>>>> parent of a97b07a... migration complete
 =======
     x: 622.4
     y: 73.6
@@ -670,9 +720,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 64d7ffff
+=======
+      m_SelectedIDs: 64330000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 54fbffff
+>>>>>>> parent of a97b07a... migration complete
 =======
       m_SelectedIDs: 64330000
       m_LastClickedID: 0
@@ -729,8 +785,13 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 357
     y: 140
+=======
+    x: 0
+    y: 73.6
+>>>>>>> parent of a97b07a... migration complete
 =======
     x: 0
     y: 73.6
@@ -754,7 +815,11 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: -0.8423911, y: 0.21249732, z: -10.354494}
+>>>>>>> parent of a97b07a... migration complete
 =======
     m_Target: {x: -0.8423911, y: 0.21249732, z: -10.354494}
 >>>>>>> parent of a97b07a... migration complete
@@ -797,7 +862,11 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 10
+=======
+    m_Target: 13.393801
+>>>>>>> parent of a97b07a... migration complete
 =======
     m_Target: 13.393801
 >>>>>>> parent of a97b07a... migration complete
