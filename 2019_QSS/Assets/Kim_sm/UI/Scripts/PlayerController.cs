@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     public Vector3 PoolInput()
     {
         float h = joystick.GetHorizontalValue();
-
         float v = joystick.GetVerticalValue();
         Vector3 moveDir = new Vector3(h, v, 0).normalized;
 

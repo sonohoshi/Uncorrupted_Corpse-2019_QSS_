@@ -4,20 +4,42 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    // Start is called before the first frame update
-    void Start()
+    public static float HP;
+    void Start() 
     {
-        
+        base.Begin();
+        HP = hp;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Move();
+
     }
 
-    public override void Move()
+    protected void UseWeapon()
     {
 
+    }
+
+    protected void Inventory()
+    {
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("FoodDepot"))
+        {
+            Food_Depot.interaction = true;
+        }      
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("fdDoor"))
+        {
+            NowFood_Health.problem = 0;
+            Food_Depot.interaction = false;
+        }
     }
 }

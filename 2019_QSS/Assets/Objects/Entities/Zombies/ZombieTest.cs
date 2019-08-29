@@ -16,7 +16,7 @@ public class ZombieTest : Entity
         Move();
     }
 
-    public override void Move()
+    protected override void Move()
     {
 
     }
