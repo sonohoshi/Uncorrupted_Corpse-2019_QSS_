@@ -7,7 +7,7 @@ public class Player : Entity
     public static float HP;
     void Start() 
     {
-        base.Begin();
+        Begin();
         HP = hp;
     }
 

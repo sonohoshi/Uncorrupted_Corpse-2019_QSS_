@@ -10,7 +10,7 @@ public class Food_Depot : Structures
 
     private void Start()
     {   
-        begin();
+        Begin();
         HP = 2000;    
     }
         

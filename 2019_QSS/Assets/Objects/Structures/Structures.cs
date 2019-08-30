@@ -17,9 +17,11 @@ public class Structures : MonoBehaviour
         BigTurret
     }
 
-    protected void begin()
+    protected void Begin()
     {
         HP = 0;
-        DP = 0;
+        DP = 200;
     }
+
+    public float GetDP() { return DP; }
 }

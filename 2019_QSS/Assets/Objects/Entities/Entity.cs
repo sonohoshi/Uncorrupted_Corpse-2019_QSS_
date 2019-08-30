@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Entity :MonoBehaviour
+public class Entity : MonoBehaviour
 {
     //protected Transform transform;
     protected float hp;
     protected float speed;
     protected float DP;
     protected float Power;
+    
 
     protected void Move()
     {
@@ -25,5 +26,9 @@ public class Entity :MonoBehaviour
     {
         hp = 50;
         
+    }
+    public float GetDP()
+    {
+        return DP;
     }
 }
