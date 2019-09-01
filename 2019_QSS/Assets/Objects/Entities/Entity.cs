@@ -25,7 +25,7 @@ public class Entity : MonoBehaviour
     protected void Begin()
     {
         hp = 50;
-        
+        DP = 100;
     }
     public float GetDP()
     {

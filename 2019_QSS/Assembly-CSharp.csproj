@@ -70,6 +70,7 @@
     <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
     <Compile Include="Assets\Objects\Items\Items.cs" />
     <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Objects\niji_K\Bread.cs" />
     <Compile Include="Assets\Objects\niji_K\TestZombie.cs" />
     <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
     <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />

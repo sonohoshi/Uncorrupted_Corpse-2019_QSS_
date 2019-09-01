@@ -19,9 +19,13 @@ public class Structures : MonoBehaviour
 
     protected void Begin()
     {
-        HP = 0;
-        DP = 200;
+        HP = 100;
+        DP = 50;
     }
 
     public float GetDP() { return DP; }
+    public void Attacked(float atk) {
+        HP -= atk; Debug.Log(HP);
+        if (HP <= 0) { Destroy(gameObject); }
+    }
 }
