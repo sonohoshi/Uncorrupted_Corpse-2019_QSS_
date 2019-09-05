@@ -206,15 +206,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4715995547517207563, guid: 89dac6af765b4324f9f738d7be4b45ed,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6877230364690178321, guid: 89dac6af765b4324f9f738d7be4b45ed,
         type: 3}
       propertyPath: m_Name
       value: bread
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715995547517207563, guid: 89dac6af765b4324f9f738d7be4b45ed,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4219346980845837068, guid: 89dac6af765b4324f9f738d7be4b45ed,
         type: 3}
@@ -17128,31 +17128,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1348307658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4650396132180585337, guid: fa0ed916e0028fa47b5f46720d414a1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4650396132980351411}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1348307662
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348307658}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8c675669682e08c4fbc0028374afeefa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1501530157
 GameObject:
   m_ObjectHideFlags: 0
@@ -17266,30 +17241,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dac6af765b4324f9f738d7be4b45ed, type: 3}
---- !u!1001 &4650396132980351411
+--- !u!1001 &2008618541
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3808874058824477069, guid: fa0ed916e0028fa47b5f46720d414a1c,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4650396132180585337, guid: fa0ed916e0028fa47b5f46720d414a1c,
         type: 3}
       propertyPath: m_Name
@@ -17354,13 +17312,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8855486705795883430, guid: b019692f1086c7646a2e5366efb38565,
+      objectReference: {fileID: -6167093419517090158, guid: c864ae4f19f57fb4eb588742504f9ee4,
         type: 3}
+    - target: {fileID: 9062159380604707554, guid: fa0ed916e0028fa47b5f46720d414a1c,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9062159380604707554, guid: fa0ed916e0028fa47b5f46720d414a1c,
         type: 3}
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3808874058824477069, guid: fa0ed916e0028fa47b5f46720d414a1c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa0ed916e0028fa47b5f46720d414a1c, type: 3}
