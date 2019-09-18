@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TestZombie : Zombie
 {
@@ -13,19 +14,29 @@ public class TestZombie : Zombie
         speed = 3;
         Power = 10;
     }
-
     // Update is called once per frame
     void Update()
     {
-        list = GameObject.FindGameObjectsWithTag("Target");
+        //타깃을 모아놓은 리스트.
+        GameObject[] list = GameObject.FindGameObjectsWithTag("Structures");
+        list = list.Concat(GameObject.FindGameObjectsWithTag("FoodDepot")).ToArray();
+        list = list.Concat(GameObject.FindGameObjectsWithTag("Player")).ToArray();
         target = list[0];
 
         Vector3 dir = new Vector3();
         foreach (GameObject obj in list) {
             dir = (target.transform.position - transform.position);
+
+            float targetdist = dir.magnitude;
             float cmpdist = (obj.transform.position - transform.position).magnitude;
 
-            if (obj.GetComponent<Structures>().GetDP()-cmpdist > target.GetComponent<Structures>().GetDP()-dir.magnitude) {
+            if (obj.GetComponent<Player>()) {
+                if (obj.GetComponent<Player>().GetPriorityPoints(cmpdist) > target.GetComponent<Player>().GetPriorityPoints(targetdist))
+                {
+                    target = obj;
+                }
+            }
+            else if (obj.GetComponent<Structures>().GetPriorityPoints(cmpdist) > target.GetComponent<Structures>().GetPriorityPoints(targetdist)) {
                 target = obj;
             }
         }

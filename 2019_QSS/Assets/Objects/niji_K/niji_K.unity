@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 132439305141569882, guid: 86a538cade107244ca39932ea9dccb35,
         type: 3}
       propertyPath: m_TagString
-      value: Target
+      value: FoodDepot
       objectReference: {fileID: 0}
     - target: {fileID: 6618869296125248451, guid: 86a538cade107244ca39932ea9dccb35,
         type: 3}

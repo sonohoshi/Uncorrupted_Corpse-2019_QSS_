@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - fdDoor
   - Target
+  - Structures
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 808093383458668941}
   m_Layer: 0
   m_Name: bread
-  m_TagString: Target
+  m_TagString: Structures
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

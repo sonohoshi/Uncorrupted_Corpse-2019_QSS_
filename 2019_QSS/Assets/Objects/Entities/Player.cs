@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    public static float HP;
+    private float BasePoint;
+    private float DistWeight;
     void Start() 
     {
         Begin();
-        HP = hp;
+        BasePoint = 30;
+        DistWeight = 1;
     }
 
     private void Update()
@@ -17,6 +19,11 @@ public class Player : Entity
         if (Input.GetKey(KeyCode.S)) gameObject.transform.Translate(new Vector3(0, -3, 0) * Time.deltaTime);
         if (Input.GetKey(KeyCode.D))gameObject.transform.Translate(new Vector3(3, 0, 0) * Time.deltaTime);
         if(Input.GetKey(KeyCode.A))gameObject.transform.Translate(new Vector3(-3, 0, 0) * Time.deltaTime);
+    }
+
+    public float GetPriorityPoints(float distance)
+    {
+        return BasePoint - (distance * DistWeight);
     }
 
     protected void UseWeapon()
