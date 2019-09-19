@@ -62,16 +62,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Objects\Entities\Entity.cs" />
-    <Compile Include="Assets\Objects\Entities\Player.cs" />
-    <Compile Include="Assets\Objects\Entities\Zombies\Zombie.cs" />
-    <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
-    <Compile Include="Assets\Objects\Items\Items.cs" />
-    <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\TakeFood.cs" />
-    <Compile Include="Assets\Objects\Structures\Structures.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Entity.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Player.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Zombies\Zombie.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\Armor.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\GetItem.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\InventorySlot\InventorySlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\PressButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\UpperUI\UpperButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Branch.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\EmptyCartridge.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Fabric.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Glass.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Glue.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Gunpowder.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\LaserPointer.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Lighter.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Nail.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\RadioactivityX.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\ScrapMetal.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Silver.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Spring.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Thread.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\ItemList\Wire.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Items.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CombinationItemSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTable.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\Food_Depot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\NowFood_Health.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\TakeFood.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
