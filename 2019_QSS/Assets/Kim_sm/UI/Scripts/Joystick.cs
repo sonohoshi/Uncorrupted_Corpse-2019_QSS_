@@ -6,10 +6,18 @@ using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
+    public static Joystick Instance { private set; get; }
+
     private Image bgImg;
     private Image JoystickImg;
     private Vector3 inputVector;
     private Vector3 NormalattackVector;
+    
+    void Awake()
+    {
+        Instance = this;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {

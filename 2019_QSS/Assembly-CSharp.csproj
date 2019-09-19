@@ -62,22 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Kim_sm\Dummy\Enemy.cs" />
     <Compile Include="Assets\Kim_sm\PlayerBehavior\Attack.cs" />
-    <Compile Include="Assets\Kim_sm\UI\Scripts\AttackBTN.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\FindZombie.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponManager.cs" />
+    <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Objects\Entities\Entity.cs" />
-    <Compile Include="Assets\Objects\Entities\Player.cs" />
-    <Compile Include="Assets\Objects\Entities\Zombies\Zombie.cs" />
-    <Compile Include="Assets\Objects\Entities\Zombies\ZombieTest.cs" />
-    <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
-    <Compile Include="Assets\Objects\Items\Items.cs" />
-    <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Objects\Objects.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\TakeFood.cs" />
-    <Compile Include="Assets\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/82108/WorkSpace/2019_QSS/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

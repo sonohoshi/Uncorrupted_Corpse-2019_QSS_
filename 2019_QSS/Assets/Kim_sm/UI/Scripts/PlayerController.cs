@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
-    public float MoveSpeed = 10.0f;
+    public float MoveSpeed = 100.0f;
 
     private Vector3 _moveVector;
     private Transform _transform;
