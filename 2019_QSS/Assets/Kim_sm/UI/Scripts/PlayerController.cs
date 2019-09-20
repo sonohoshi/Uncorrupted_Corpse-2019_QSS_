@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
-    public float MoveSpeed = 10.0f;
+    public float MoveSpeed = 100.0f;
 
     private Vector3 _moveVector;
     private Transform _transform;
@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     public Vector3 PoolInput()
     {
         float h = joystick.GetHorizontalValue();
-
         float v = joystick.GetVerticalValue();
         Vector3 moveDir = new Vector3(h, v, 0).normalized;
 

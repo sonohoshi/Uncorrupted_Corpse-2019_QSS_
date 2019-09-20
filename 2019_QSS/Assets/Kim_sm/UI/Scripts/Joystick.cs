@@ -6,15 +6,25 @@ using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
+    public static Joystick Instance { private set; get; }
+
     private Image bgImg;
     private Image JoystickImg;
     private Vector3 inputVector;
-
+    private Vector3 NormalattackVector;
+    
+    void Awake()
+    {
+        Instance = this;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         bgImg = GetComponent<Image>();
         JoystickImg = transform.GetChild(0).GetComponent<Image>();
+        NormalattackVector.x = 0.0f;
+        NormalattackVector.y = 1.0f;
     }
     public virtual void OnDrag(PointerEventData ped)
     {
@@ -39,6 +49,9 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     }
     public virtual void OnPointerUp(PointerEventData ped)
     {
+        NormalattackVector = inputVector; // 떼기 직전의 마지막 바라보고 있던 방향의 벡터값을 공격용으로 리턴하기 위하여
+        Debug.Log(NormalattackVector.x);
+        Debug.Log(NormalattackVector.y);
         inputVector = Vector3.zero; // 조이스틱에서 손을 뗄 경우, 벡터값을 초기화 해줌
         JoystickImg.rectTransform.anchoredPosition = Vector3.zero;
     }
@@ -49,5 +62,13 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     public float GetVerticalValue()
     {
         return inputVector.y;
+    }
+    public float attackHorizontalValue() // 어택과 상호작용을 하기 위하여
+    {
+        return NormalattackVector.x;
+    }
+    public float attackVerticalValue()
+    {
+        return NormalattackVector.y;
     }
 }
