@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Food_Depot : Structures
 {
-    public GameObject F_D_Interection;
+    private GameObject F_D_Interection;
     public static bool interaction = false;
     public static int food = 1000;
 
     private void Start()
     {   
-        begin();
+        Begin();
         HP = 2000;    
     }
         
@@ -18,11 +18,11 @@ public class Food_Depot : Structures
     {
         if(interaction == true)
         {
-            F_D_Interection.SetActive(true);
+          //  F_D_Interection.SetActive(true);
         }
         else if(interaction == false)
         {
-            F_D_Interection.SetActive(false);
+           // F_D_Interection.SetActive(false);
         }
     }       
 }

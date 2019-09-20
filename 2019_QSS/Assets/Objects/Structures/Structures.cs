@@ -6,6 +6,8 @@ public class Structures : MonoBehaviour
 {
     protected float DP;
     protected float HP;
+    protected float BasePoint;
+    protected float DistWeight;
     public enum StrucutreType
     {
         FoodDepot,
@@ -17,9 +19,18 @@ public class Structures : MonoBehaviour
         BigTurret
     }
 
-    protected void begin()
+    protected void Begin()
     {
-        HP = 0;
-        DP = 0;
+        HP = 100;
+        DP = 50;
+        BasePoint = 100;
+        DistWeight = 1;
+    }
+    public float GetPriorityPoints(float distance) {
+        return BasePoint - (distance * DistWeight);
+    }
+    public void Attacked(float atk) {
+        HP -= atk; Debug.Log(HP);
+        if (HP <= 0) { Destroy(gameObject); }
     }
 }
