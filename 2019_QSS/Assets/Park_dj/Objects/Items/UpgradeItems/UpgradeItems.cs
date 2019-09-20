@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : Items
+public class UpgradeItems : Items
 {
     protected float Armable_number_bullets;//장전가능한 총알 수
     protected float AttackPower;
