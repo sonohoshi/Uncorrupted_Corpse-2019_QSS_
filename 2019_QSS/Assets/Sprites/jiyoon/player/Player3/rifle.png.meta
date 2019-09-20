@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: aa1a0784df0e0c943adc697bbd45b196
+guid: 3f8c448b27940484f808766d546e4ecb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8527568592950175283
-    second: empty_0
+      213: 8333481726314500824
+    second: rifle_0
   - first:
-      213: 7217862130964805925
-    second: empty_1
+      213: -2467041043869801362
+    second: rifle_1
   - first:
-      213: -8867929037098446179
-    second: empty_2
+      213: -8742243980035695331
+    second: rifle_2
   - first:
-      213: -7017535663036590078
-    second: empty_3
+      213: 351736906144962385
+    second: rifle_3
   - first:
-      213: -4802916704524997647
-    second: empty_4
+      213: 6239978742061240995
+    second: rifle_4
   - first:
-      213: -7758703853981673505
-    second: empty_5
+      213: 3914022835182872043
+    second: rifle_5
   - first:
-      213: 4065770466474804917
-    second: empty_6
+      213: 2431475383577292455
+    second: rifle_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -68,7 +68,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -179,32 +179,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: empty_0
+      name: rifle_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 104
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdd535a00101577458cb8456ba9d00fb
-      internalID: -8527568592950175283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: empty_1
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 8
+        x: 28
+        y: 28
         width: 108
         height: 184
       alignment: 0
@@ -214,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e71632f836343094fb62fb117d3c3c68
-      internalID: 7217862130964805925
+      spriteID: ee8c3048cdfda0d4195660fead0fd2eb
+      internalID: 8333481726314500824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_2
+      name: rifle_1
       rect:
         serializedVersion: 2
-        x: 292
-        y: 8
-        width: 108
-        height: 184
+        x: 153
+        y: 31
+        width: 160
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0567e250f02af945b6ceada05e7cfb5
-      internalID: -8867929037098446179
+      spriteID: 2171cb1ec8a82224bbefd8dffa8955fd
+      internalID: -2467041043869801362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_3
+      name: rifle_2
       rect:
         serializedVersion: 2
-        x: 436
-        y: 8
-        width: 108
-        height: 184
+        x: 331
+        y: 24
+        width: 159
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 332dc443b192ad04ebb489a2fb5e931e
-      internalID: -7017535663036590078
+      spriteID: 090c7419fbaf7744ba911cba9413bcb0
+      internalID: -8742243980035695331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_4
+      name: rifle_3
       rect:
         serializedVersion: 2
-        x: 580
-        y: 4
-        width: 108
-        height: 184
+        x: 519
+        y: 24
+        width: 157
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b86330bb988ed4b89708ba6329c0bc
-      internalID: -4802916704524997647
+      spriteID: f636c2841390f5b4d9af4187d0209834
+      internalID: 351736906144962385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_5
+      name: rifle_4
       rect:
         serializedVersion: 2
-        x: 724
-        y: 8
-        width: 104
-        height: 184
+        x: 717
+        y: 30
+        width: 159
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa02a62eb8be11749a4c9c4ef92d936f
-      internalID: -7758703853981673505
+      spriteID: 0aa9ccbb1d6ce764b9195d99c0cb299c
+      internalID: 6239978742061240995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_6
+      name: rifle_5
       rect:
         serializedVersion: 2
-        x: 868
-        y: 8
-        width: 108
-        height: 184
+        x: 913
+        y: 28
+        width: 159
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,8 +298,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15ae17f22acdc754b9ee73d3d10dacc8
-      internalID: 4065770466474804917
+      spriteID: f3b5c5af4cb70dd40a10ffac7b1ca1e3
+      internalID: 3914022835182872043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rifle_6
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 33
+        width: 157
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95114f59882cd744ae650e81da11c3e
+      internalID: 2431475383577292455
       vertices: []
       indices: 
       edges: []
