@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: aa1a0784df0e0c943adc697bbd45b196
+guid: 4a09ac6979ce8564e80929c26b6d4dce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8527568592950175283
-    second: empty_0
+      213: -9208761201745400335
+    second: crossbow_0
   - first:
-      213: 7217862130964805925
-    second: empty_1
+      213: 2594179332509777445
+    second: crossbow_1
   - first:
-      213: -8867929037098446179
-    second: empty_2
+      213: -4412905768979040811
+    second: crossbow_2
   - first:
-      213: -7017535663036590078
-    second: empty_3
+      213: -3080513131145851073
+    second: crossbow_3
   - first:
-      213: -4802916704524997647
-    second: empty_4
+      213: -3939775271289919517
+    second: crossbow_4
   - first:
-      213: -7758703853981673505
-    second: empty_5
+      213: 8288218255699463653
+    second: crossbow_5
   - first:
-      213: 4065770466474804917
-    second: empty_6
+      213: 5935947877478626021
+    second: crossbow_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -68,7 +68,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -179,32 +179,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: empty_0
+      name: crossbow_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 104
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdd535a00101577458cb8456ba9d00fb
-      internalID: -8527568592950175283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: empty_1
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 8
+        x: 28
+        y: 28
         width: 108
         height: 184
       alignment: 0
@@ -214,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e71632f836343094fb62fb117d3c3c68
-      internalID: 7217862130964805925
+      spriteID: de482680c8b6a01489ba466af6133496
+      internalID: -9208761201745400335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_2
+      name: crossbow_1
       rect:
         serializedVersion: 2
-        x: 292
-        y: 8
-        width: 108
-        height: 184
+        x: 164
+        y: 28
+        width: 157
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0567e250f02af945b6ceada05e7cfb5
-      internalID: -8867929037098446179
+      spriteID: e2e5103a8d05def4c8f951ddce6cc2ab
+      internalID: 2594179332509777445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_3
+      name: crossbow_2
       rect:
         serializedVersion: 2
-        x: 436
-        y: 8
-        width: 108
-        height: 184
+        x: 363
+        y: 27
+        width: 156
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 332dc443b192ad04ebb489a2fb5e931e
-      internalID: -7017535663036590078
+      spriteID: 9c1843053ec65ae4ab8b88500c6005a0
+      internalID: -4412905768979040811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_4
+      name: crossbow_3
       rect:
         serializedVersion: 2
-        x: 580
-        y: 4
-        width: 108
-        height: 184
+        x: 553
+        y: 28
+        width: 151
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b86330bb988ed4b89708ba6329c0bc
-      internalID: -4802916704524997647
+      spriteID: 5b494789c7a10a64aa18eaf4e232de09
+      internalID: -3080513131145851073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_5
+      name: crossbow_4
       rect:
         serializedVersion: 2
-        x: 724
-        y: 8
-        width: 104
-        height: 184
+        x: 750
+        y: 37
+        width: 152
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa02a62eb8be11749a4c9c4ef92d936f
-      internalID: -7758703853981673505
+      spriteID: c7bd28467d4617944ba49b0feebfe145
+      internalID: -3939775271289919517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_6
+      name: crossbow_5
       rect:
         serializedVersion: 2
-        x: 868
-        y: 8
-        width: 108
-        height: 184
+        x: 959
+        y: 35
+        width: 151
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,8 +298,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15ae17f22acdc754b9ee73d3d10dacc8
-      internalID: 4065770466474804917
+      spriteID: 321e2cb9099c8074885e9c7409189a52
+      internalID: 8288218255699463653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crossbow_6
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 34
+        width: 149
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27d07497d5168e4dab904ad9aafae2a
+      internalID: 5935947877478626021
       vertices: []
       indices: 
       edges: []

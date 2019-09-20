@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: aa1a0784df0e0c943adc697bbd45b196
+guid: b1ab5f8c2cb9c1145bcf5f18469a0bba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8527568592950175283
-    second: empty_0
+      213: 6376352599641766108
+    second: nailbat_0
   - first:
-      213: 7217862130964805925
-    second: empty_1
+      213: -4405184907408085876
+    second: nailbat_1
   - first:
-      213: -8867929037098446179
-    second: empty_2
+      213: 518873169446007298
+    second: nailbat_2
   - first:
-      213: -7017535663036590078
-    second: empty_3
+      213: -7196273694684215471
+    second: nailbat_3
   - first:
-      213: -4802916704524997647
-    second: empty_4
-  - first:
-      213: -7758703853981673505
-    second: empty_5
-  - first:
-      213: 4065770466474804917
-    second: empty_6
+      213: 1348945910259683519
+    second: nailbat_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -68,7 +62,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -179,13 +173,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: empty_0
+      name: nailbat_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 104
-        height: 184
+        x: 56
+        y: 28
+        width: 120
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd535a00101577458cb8456ba9d00fb
-      internalID: -8527568592950175283
+      spriteID: fa65569283d80c042a94db3f7eb45c5a
+      internalID: 6376352599641766108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_1
+      name: nailbat_1
       rect:
         serializedVersion: 2
-        x: 148
-        y: 8
-        width: 108
-        height: 184
+        x: 204
+        y: 28
+        width: 140
+        height: 216
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e71632f836343094fb62fb117d3c3c68
-      internalID: 7217862130964805925
+      spriteID: afae235f8e6c06a4aa58b92d90677d83
+      internalID: -4405184907408085876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_2
+      name: nailbat_2
       rect:
         serializedVersion: 2
-        x: 292
-        y: 8
-        width: 108
-        height: 184
+        x: 376
+        y: 28
+        width: 136
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0567e250f02af945b6ceada05e7cfb5
-      internalID: -8867929037098446179
+      spriteID: c9569c6a639590041a18fef614992be4
+      internalID: 518873169446007298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_3
+      name: nailbat_3
       rect:
         serializedVersion: 2
-        x: 436
-        y: 8
-        width: 108
-        height: 184
+        x: 544
+        y: 28
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 332dc443b192ad04ebb489a2fb5e931e
-      internalID: -7017535663036590078
+      spriteID: 73ff1ee5b0724b9419ad36a6a9e87d14
+      internalID: -7196273694684215471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty_4
+      name: nailbat_4
       rect:
         serializedVersion: 2
-        x: 580
-        y: 4
-        width: 108
-        height: 184
+        x: 776
+        y: 28
+        width: 204
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,50 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b86330bb988ed4b89708ba6329c0bc
-      internalID: -4802916704524997647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: empty_5
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 8
-        width: 104
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa02a62eb8be11749a4c9c4ef92d936f
-      internalID: -7758703853981673505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: empty_6
-      rect:
-        serializedVersion: 2
-        x: 868
-        y: 8
-        width: 108
-        height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15ae17f22acdc754b9ee73d3d10dacc8
-      internalID: 4065770466474804917
+      spriteID: fdf8664d334c5404eb0b0d51b9eed558
+      internalID: 1348945910259683519
       vertices: []
       indices: 
       edges: []
