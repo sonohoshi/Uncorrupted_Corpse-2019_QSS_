@@ -179,10 +179,10 @@ TextureImporter:
       name: zomebie_attack_0
       rect:
         serializedVersion: 2
-        x: 183
-        y: 32
-        width: 187
-        height: 336
+        x: 124
+        y: 16
+        width: 132
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86972cedcc864d4eb7a5e640984e4ae
+      spriteID: b930527e805db8d42b3390f95af4166a
       internalID: -6167093419517090158
       vertices: []
       indices: 
@@ -200,10 +200,10 @@ TextureImporter:
       name: zomebie_attack_1
       rect:
         serializedVersion: 2
-        x: 380
-        y: 32
-        width: 194
-        height: 337
+        x: 260
+        y: 16
+        width: 136
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bc2c8749a7f65d4bb129d0c4af1e524
+      spriteID: f449fc681aacc7d4e9c1f289b38508da
       internalID: -2230091533967373618
       vertices: []
       indices: 
@@ -221,10 +221,10 @@ TextureImporter:
       name: zomebie_attack_2
       rect:
         serializedVersion: 2
-        x: 584
-        y: 31
-        width: 186
-        height: 337
+        x: 396
+        y: 16
+        width: 132
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8835147a937edb842824a72c7b6bce85
+      spriteID: 34ee138d40f58db40a0a03ce25f30060
       internalID: -2266449546535087462
       vertices: []
       indices: 
@@ -242,10 +242,10 @@ TextureImporter:
       name: zomebie_attack_3
       rect:
         serializedVersion: 2
-        x: 781
-        y: 32
-        width: 170
-        height: 337
+        x: 532
+        y: 16
+        width: 120
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f41ba53a089c2724bae59a779dfcf321
+      spriteID: 5fc8e0ef6ed60fd459a3832a440ccac1
       internalID: 7418681606923534925
       vertices: []
       indices: 
@@ -263,10 +263,10 @@ TextureImporter:
       name: zomebie_attack_4
       rect:
         serializedVersion: 2
-        x: 961
-        y: 38
-        width: 178
-        height: 333
+        x: 656
+        y: 24
+        width: 124
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81b9493a22fe7154fa33a60dcf46f39c
+      spriteID: dd779e75e2c9dd047be4bf71b797e600
       internalID: 8882047481391760923
       vertices: []
       indices: 
@@ -284,10 +284,10 @@ TextureImporter:
       name: zomebie_attack_5
       rect:
         serializedVersion: 2
-        x: 1150
-        y: 33
-        width: 173
-        height: 329
+        x: 784
+        y: 16
+        width: 124
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e2cd08f32435e43bb0f80c31c719bd
+      spriteID: 0ec6642153e7d5a4389ee731070051bf
       internalID: 8252683694434212015
       vertices: []
       indices: 
