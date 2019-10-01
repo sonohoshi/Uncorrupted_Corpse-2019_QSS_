@@ -179,10 +179,10 @@ TextureImporter:
       name: pistol_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 28
-        width: 144
-        height: 180
+        x: 57
+        y: 22
+        width: 276
+        height: 354
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f3d24c709e59774594480f656138fd8
+      spriteID: 4c6650e9156ecdc4589d2466a2c66119
       internalID: -4854829337826818713
       vertices: []
       indices: 
@@ -200,10 +200,10 @@ TextureImporter:
       name: pistol_1
       rect:
         serializedVersion: 2
-        x: 188
-        y: 28
-        width: 144
-        height: 180
+        x: 376
+        y: 22
+        width: 277
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d07f7a7efc358814c89fc0056e76e90b
+      spriteID: 8e15d6895d26e5c4f973b9c0290a1139
       internalID: -5900747555884359866
       vertices: []
       indices: 
@@ -221,10 +221,10 @@ TextureImporter:
       name: pistol_2
       rect:
         serializedVersion: 2
-        x: 336
-        y: 28
-        width: 148
-        height: 180
+        x: 701
+        y: 22
+        width: 276
+        height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0529dbc374579c4b915ef9b96f7bfb8
+      spriteID: 1e1176d83f69c9149b912b31f4b7d0a0
       internalID: -9044998883933546132
       vertices: []
       indices: 
@@ -242,10 +242,10 @@ TextureImporter:
       name: pistol_3
       rect:
         serializedVersion: 2
-        x: 500
-        y: 32
-        width: 144
-        height: 176
+        x: 1020
+        y: 15
+        width: 277
+        height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1518d7e5d900e8e46aaae073248aff5d
+      spriteID: 5b35e22372cebfc49883cd4b32320f87
       internalID: -1047946430589172204
       vertices: []
       indices: 
@@ -263,10 +263,10 @@ TextureImporter:
       name: pistol_4
       rect:
         serializedVersion: 2
-        x: 676
-        y: 28
-        width: 144
-        height: 180
+        x: 1344
+        y: 22
+        width: 277
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95ed9836aada6a49bc3cf715c9c06dc
+      spriteID: 6bef59c5715ecaf46a998f62edf62fd8
       internalID: -247361163814606302
       vertices: []
       indices: 
@@ -284,10 +284,10 @@ TextureImporter:
       name: pistol_5
       rect:
         serializedVersion: 2
-        x: 848
-        y: 28
-        width: 148
-        height: 176
+        x: 1656
+        y: 22
+        width: 275
+        height: 358
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15af8813edac0aa4da8abd7ae92312aa
+      spriteID: 4b5fe0c48ab531d42b6d461b3d7c3f5f
       internalID: 8443715686503185739
       vertices: []
       indices: 
