@@ -6,38 +6,27 @@ using UnityEngine.UI;
 public class Attack : MonoBehaviour
 {
     public GameObject bullet;
-    Vector3 attackVector = new Vector3(0f, 0f);
     public Transform BulletLocation;
+    public Transform GunRotation;
     public float BulletDelay;
-    private bool BulletState;
-    // Start is called before the first frame update
-    void Start()
-    {
-        BulletState = true;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        attackVector = AttackPrepare.PullAttackVector();
-        BulletLocation.eulerAngles = attackVector;
-    }
+    private readonly Vector3 addAngle = new Vector3(0, 0, -90);
 
-    private void FixedUpdate()
+    private void Awake()
     {
-        
+        PistolBaseBullet.Initalize(BulletLocation, GunRotation);
+        PistolBaseBullet.StartCoroutine();
     }
 
     public void UserAttack(int WeaponType)
     {
-        StartCoroutine(FireCycleControl());
-        Instantiate(bullet, BulletLocation.position, BulletLocation.rotation);
-    }
+        PistolBaseBullet.ShotBullet();
 
-    IEnumerator FireCycleControl()
-    {
-        BulletState = false;
-        yield return new WaitForSeconds(BulletDelay);
-        BulletState = true;
+        //BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
+        //bulletinfo.Bullet.position = BulletLocation.position;
+        //bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;
+        
+        // Transform b = Instantiate<Transform>(bullet.transform, BulletLocation.position, GunRotation.rotation);
+        // b.eulerAngles += new Vector3(0, 0, -90);
     }
 }

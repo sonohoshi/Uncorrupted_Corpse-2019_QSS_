@@ -49,7 +49,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     }
     public virtual void OnPointerUp(PointerEventData ped)
     {
-        NormalattackVector = inputVector; // 떼기 직전의 마지막 바라보고 있던 방향의 벡터값을 공격용으로 리턴하기 위하여
+        NormalattackVector = inputVector; // 현재 안씀
         Debug.Log(NormalattackVector.x);
         Debug.Log(NormalattackVector.y);
         inputVector = Vector3.zero; // 조이스틱에서 손을 뗄 경우, 벡터값을 초기화 해줌

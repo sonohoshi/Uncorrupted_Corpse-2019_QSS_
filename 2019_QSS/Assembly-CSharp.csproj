@@ -27,7 +27,7 @@
     <DefineConstants>DEBUG;TRACE;UNITY_2019_2_1;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+    <NoWarn>0169;CS0649;IDE0051</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -36,7 +36,7 @@
     <OutputPath>Temp\bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+    <NoWarn>0169;CS0649;IDE0051</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
@@ -62,69 +62,110 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Kim_sm\Bullet\PistolBaseBullet.cs" />
     <Compile Include="Assets\Kim_sm\Dummy\Enemy.cs" />
+    <Compile Include="Assets\Kim_sm\Manager\BulletManager.cs" />
+    <Compile Include="Assets\Kim_sm\Manager\CoroutineManager.cs" />
+    <Compile Include="Assets\Kim_sm\Manager\ObjectPoolManager.cs" />
     <Compile Include="Assets\Kim_sm\PlayerBehavior\Attack.cs" />
     <Compile Include="Assets\Kim_sm\PlayerBehavior\FindZombie.cs" />
-    <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponManager.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponAndFlipManager.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Objects\niji_K\Bread.cs" />
+    <Compile Include="Assets\Objects\niji_K\TestZombie.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Entity.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Player.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Zombies\Zombie.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\Armor.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\GetItem.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\InventorySlot\InventorySlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\PressButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\UpperUI\UpperButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Items.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Branch.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\EmptyCartridge.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Fabric.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glass.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glue.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Gunpowder.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\LaserPointer.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Lighter.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Nail.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\RadioactivityX.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\ScrapMetal.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Silver.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Spring.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Thread.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Wire.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItems\UpgradeItems.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CombinationItemSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTable.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\Food_Depot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\NowFood_Health.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\TakeFood.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -304,13 +345,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/82108/WorkSpace/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
