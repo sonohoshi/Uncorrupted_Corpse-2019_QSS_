@@ -16,7 +16,7 @@ public class Entity : MonoBehaviour
 
     }
 
-    protected void Attack()
+    protected virtual void Attack()
     {
         
     }

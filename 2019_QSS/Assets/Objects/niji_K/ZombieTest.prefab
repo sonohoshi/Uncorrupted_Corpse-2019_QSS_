@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4650396132180585343}
   - component: {fileID: 4650396132180585336}
   - component: {fileID: 9062159380604707554}
-  - component: {fileID: 6909375245856018519}
+  - component: {fileID: 1045911004362066013}
   m_Layer: 0
   m_Name: ZombieTest
   m_TagString: Untagged
@@ -72,7 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4f7d356e056f2d4d81ec63ac5308a7b, type: 3}
+  m_Sprite: {fileID: -1770389058817702719, guid: e699890ef56b7954bba5655dea18f881,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,8 +117,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &6909375245856018519
-CapsuleCollider2D:
+--- !u!61 &1045911004362066013
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,5 +131,15 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.87, y: 3.36}
-  m_Direction: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.05, y: 3.47}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.05, y: 3.47}
+  m_EdgeRadius: 0
