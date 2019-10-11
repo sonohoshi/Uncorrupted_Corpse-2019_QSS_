@@ -21,6 +21,11 @@ public class Zombie : Entity
         BigZzangZzangSanZombie
     }
 
+    public void Move(Vector3 dir) 
+    {
+        transform.Translate(dir.normalized * speed * Time.deltaTime);
+        GetComponent<SpriteRenderer>().flipX = dir.x < 0;
+    }
     public GameObject SelectTarget()
     {
         //target: 반환할 타깃; list: 타깃 가능한 오브젝트들 목록
