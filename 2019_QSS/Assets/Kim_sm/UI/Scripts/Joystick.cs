@@ -28,7 +28,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     }
     public virtual void OnDrag(PointerEventData ped)
     {
-        Debug.Log("Joystick >>> OnDrag()");
+        // Debug.Log("Joystick >>> OnDrag()");
         Vector2 pos;
         if(RectTransformUtility.ScreenPointToLocalPointInRectangle(bgImg.rectTransform,ped.position,ped.pressEventCamera,out pos))
         {
@@ -63,12 +63,5 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     {
         return inputVector.y;
     }
-    public float attackHorizontalValue() // 어택과 상호작용을 하기 위하여
-    {
-        return NormalattackVector.x;
-    }
-    public float attackVerticalValue()
-    {
-        return NormalattackVector.y;
-    }
+    
 }

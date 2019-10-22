@@ -9,19 +9,21 @@ public class Attack : MonoBehaviour
     public Transform BulletLocation;
     public Transform GunRotation;
     public float BulletDelay;
-
+    private Button AttackButton;
     private readonly Vector3 addAngle = new Vector3(0, 0, -90);
 
     private void Awake()
     {
-        PistolBaseBullet.Initalize(BulletLocation, GunRotation);
-        PistolBaseBullet.StartCoroutine();
+        AttackButton = this.transform.GetComponent<Button>();
+        AttackButton.onClick.AddListener(UserAttack);
+        ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
+        ShotgunBaseBullet.StartCoroutine();
     }
 
-    public void UserAttack(int WeaponType)
+    public void UserAttack()
     {
-        PistolBaseBullet.ShotBullet();
-
+        //PistolBaseBullet.ShotPistolBullet();
+        ShotgunBaseBullet.StartshotgunDelayCoroutine();
         //BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
         //bulletinfo.Bullet.position = BulletLocation.position;
         //bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;

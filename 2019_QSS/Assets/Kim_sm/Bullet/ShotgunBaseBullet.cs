@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PistolBaseBullet
+public static class ShotgunBaseBullet
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
-    public readonly static  BulletManager.BulletType type = BulletManager.BulletType.Base;
-    private static readonly float LiveTime = 1f;
-    public static Transform BulletLocation;
+    public readonly static BulletManager.BulletType type = BulletManager.BulletType.Base;
+    private static readonly float LiveTime = 3f;
+    public static Transform BulletTransform;
     public static Transform GunRotation;
-    private static Vector3 moveVector = new Vector3(0, 50, 0);
+    private static Vector3 moveVector = new Vector3(0, 15, 0);
     private static int dirBullet = 15;
 
     private static bool reloadSwitch = false;
-    private static bool pistolDelay = false;
+    private static bool shotgunDelay = false;
 
-    private static readonly Vector3 addModifyAngle = new Vector3(0, 0, -90);
+    private static readonly Vector3 addAngle = new Vector3(0, 0, -90);
+    private static readonly float minAngle = -6;
 
     private static IEnumerator MoveBullet()
     {
@@ -35,7 +36,7 @@ public static class PistolBaseBullet
                         continue;
                     }
 
-                    bullets[i].Bullet.Translate(moveVector * Time.deltaTime);
+                    bullets[i].Bullet.Translate(moveVector * Time.deltaTime * Random.Range(0.8f, 1.2f));
 
                     bullets[i].LiveTime -= 0.01f;
                 }
@@ -65,34 +66,53 @@ public static class PistolBaseBullet
     {
         CoroutineManager.Instance.StartCoroutine(MoveBullet());
     }
-    
-    public static IEnumerator PistolDelayManage()
+
+    public static IEnumerator ShotgunDelayManage()
     {
-        if (!pistolDelay)
+        if (!shotgunDelay)
         {
-            FirePistolBullet();
-            pistolDelay = true;
+            FireshotgunBullet();
+            shotgunDelay = true;
             yield return new WaitForSeconds(0.2f);
-            pistolDelay = false;
+            shotgunDelay = false;
         }
     }
-    public static void StartPistolDelayCoroutine()
+    public static void StartshotgunDelayCoroutine()
     {
-        CoroutineManager.Instance.StartCoroutine(PistolDelayManage());
+        CoroutineManager.Instance.StartCoroutine(ShotgunDelayManage());
     }
 
-    public static void FirePistolBullet()
+    private static void AddBullet()
+    {
+        float rand = -Random.Range(5, 14f);
+        Vector3 vec = new Vector3(0, 0, rand);
+
+        Debug.Log("집탄율 : " + rand);
+
+        for (; vec.z <= -rand; vec.z += -rand / 2)
+        {
+            BulletManager.BulletInfo info = ObjectPoolManager.Dequeue(type);
+            info.Bullet.position = BulletTransform.position;
+            info.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle + vec;
+            info.LiveTime = LiveTime;
+            bullets.Add(info);
+        }
+    }
+
+    public static void FireshotgunBullet()
     {
         if (dirBullet > 0) // 현재 총알이 남아있을 경우
-        {    
-            BulletManager.BulletInfo bulletInfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
-            bulletInfo.Bullet.position = BulletLocation.position;
-            bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles + addModifyAngle;
+        {
+            /*
+            BulletManager.BulletInfo bulletInfo = ObjectPoolManager.Dequeue(type);
+            bulletInfo.Bullet.position = BulletTransform.position;
+            bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles;
             bulletInfo.LiveTime = LiveTime;
             bullets.Add(bulletInfo);
-            
+            */
+            AddBullet();
             dirBullet--;
-            Debug.Log(dirBullet);
+            Debug.Log(dirBullet); // 살려줘 씨발
         }
         else // 아니라면 재장전 코루틴을 부른다
         {
@@ -102,8 +122,8 @@ public static class PistolBaseBullet
 
     public static void Initalize(Transform bulletLocation, Transform gunRotation)
     {
-        BulletLocation = bulletLocation;
+        BulletTransform = bulletLocation;
         GunRotation = gunRotation;
     }
-    
+
 }

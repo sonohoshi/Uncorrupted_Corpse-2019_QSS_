@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Kim_sm\Bullet\PistolBaseBullet.cs" />
+    <Compile Include="Assets\Kim_sm\Bullet\ShotgunBaseBullet.cs" />
     <Compile Include="Assets\Kim_sm\Dummy\Enemy.cs" />
     <Compile Include="Assets\Kim_sm\Manager\BulletManager.cs" />
     <Compile Include="Assets\Kim_sm\Manager\CoroutineManager.cs" />
@@ -70,9 +71,9 @@
     <Compile Include="Assets\Kim_sm\PlayerBehavior\Attack.cs" />
     <Compile Include="Assets\Kim_sm\PlayerBehavior\FindZombie.cs" />
     <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponAndFlipManager.cs" />
-    <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Objects\Kim_sm\ZombieDamaged.cs" />
     <Compile Include="Assets\Objects\niji_K\Bread.cs" />
     <Compile Include="Assets\Objects\niji_K\TestZombie.cs" />
     <Compile Include="Assets\Park_dj\Objects\Entities\Entity.cs" />

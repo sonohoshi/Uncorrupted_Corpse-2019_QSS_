@@ -9,6 +9,7 @@ TagManager:
   - fdDoor
   - Target
   - Structures
+  - BaseBullet
   layers:
   - Default
   - TransparentFX

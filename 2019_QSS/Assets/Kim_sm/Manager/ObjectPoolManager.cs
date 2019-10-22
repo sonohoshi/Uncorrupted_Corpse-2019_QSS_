@@ -28,7 +28,6 @@ public static class ObjectPoolManager
             info = new BulletManager.BulletInfo();
             info.Bullet = MonoBehaviour.Instantiate<Transform>(Resources.Load<Transform>(BulletManager.BulletTypeToPath(type)));
             info.ImageType = type;
-            //Enqueue(type, info); enqueue는 그 시바 머야 다시 사라질때 해줘야됨
         }
 
         return info;
