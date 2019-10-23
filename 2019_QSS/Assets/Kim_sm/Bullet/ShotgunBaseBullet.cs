@@ -95,13 +95,17 @@ public static class ShotgunBaseBullet
             info.Bullet.position = BulletTransform.position;
             info.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle + vec;
             info.LiveTime = LiveTime;
+            if (vec.z == 0)
+            {
+                info.Bullet.eulerAngles += new Vector3(0,0,Random.Range(-rand * 0.1f, rand * 0.1f));
+            }
             bullets.Add(info);
         }
     }
 
     public static void FireshotgunBullet()
     {
-        if (dirBullet > 0) // 현재 총알이 남아있을 경우
+        if (/*dirBullet > 0*/ true) // 현재 총알이 남아있을 경우
         {
             /*
             BulletManager.BulletInfo bulletInfo = ObjectPoolManager.Dequeue(type);

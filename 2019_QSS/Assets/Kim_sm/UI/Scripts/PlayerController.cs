@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
-    public float MoveSpeed = 100.0f;
+    public float moveSpeed;
+    public Animator playerMoveAnimator;
 
     private Vector3 _moveVector;
     private Transform _transform;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMove();
+        playerMoveAnimator.SetBool("IsMove", DistinctionMoving());
     }
 
     public void HandleInput()
@@ -43,6 +45,13 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerMove()
     {
-        _transform.Translate(_moveVector * MoveSpeed * Time.deltaTime);
+        _transform.Translate(_moveVector * moveSpeed * Time.deltaTime);
+    }
+    public bool DistinctionMoving()
+    {
+        if (_moveVector.x != 0 || _moveVector.y != 0)
+            return true;
+
+        return false;
     }
 }

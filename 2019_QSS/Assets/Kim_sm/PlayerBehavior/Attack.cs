@@ -19,7 +19,10 @@ public class Attack : MonoBehaviour
         ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
         ShotgunBaseBullet.StartCoroutine();
     }
-
+    private void Update()
+    {
+        ShotgunBaseBullet.FireshotgunBullet();
+    }
     public void UserAttack()
     {
         //PistolBaseBullet.ShotPistolBullet();
