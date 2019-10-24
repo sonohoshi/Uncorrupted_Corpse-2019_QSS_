@@ -16,17 +16,17 @@ public class Attack : MonoBehaviour
     {
         AttackButton = this.transform.GetComponent<Button>();
         AttackButton.onClick.AddListener(UserAttack);
-        ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
-        ShotgunBaseBullet.StartCoroutine();
+        //ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
+        //ShotgunBaseBullet.StartCoroutine();
+        CrosbowBaseBullet.Initalize(BulletLocation, GunRotation);
+        CrosbowBaseBullet.StartCoroutine();
     }
-    private void Update()
-    {
-        ShotgunBaseBullet.FireshotgunBullet();
-    }
+    
     public void UserAttack()
     {
         //PistolBaseBullet.ShotPistolBullet();
-        ShotgunBaseBullet.StartshotgunDelayCoroutine();
+        //ShotgunBaseBullet.StartshotgunDelayCoroutine();
+        CrosbowBaseBullet.StartCrosbowDelayCoroutine();
         //BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
         //bulletinfo.Bullet.position = BulletLocation.position;
         //bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;

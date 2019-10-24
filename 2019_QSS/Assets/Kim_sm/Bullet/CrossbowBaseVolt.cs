@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PistolBaseBullet
+public static class CrosbowBaseBullet
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
-    public readonly static  BulletManager.BulletType type = BulletManager.BulletType.Base;
-    private static readonly float LiveTime = 1f; // 대충 10미터라고 잡아보자.
+    public readonly static BulletManager.BulletType type = BulletManager.BulletType.BaseVolt;
+    private static readonly float LiveTime = 1.5f; // 대충 15미터라고 잡아보자.
     public static Transform BulletLocation;
     public static Transform GunRotation;
     private static Vector3 moveVector = new Vector3(0, 50, 0);
-    private static int dirBullet = 15;
+    private static int dirBullet = 1;
 
     private static bool reloadSwitch = false;
-    private static bool pistolDelay = false;
+    private static bool crosbowDelay = false;
 
     private static readonly Vector3 addModifyAngle = new Vector3(0, 0, -90);
 
@@ -50,9 +50,9 @@ public static class PistolBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             reloadSwitch = false;
-            dirBullet = 15;
+            dirBullet = 1;
             Debug.Log("Reload Complete");
         }
         else if (dirBullet <= 0 && reloadSwitch) // 이미 재장전을 하고 있을 때는 재장전 중을 알려줌
@@ -65,32 +65,32 @@ public static class PistolBaseBullet
     {
         CoroutineManager.Instance.StartCoroutine(MoveBullet());
     }
-    
-    public static IEnumerator PistolDelayManage()
+
+    public static IEnumerator CrosbowDelayManage()
     {
-        if (!pistolDelay)
+        if (!crosbowDelay)
         {
-            FirePistolBullet();
-            pistolDelay = true;
+            FireCrosbowBullet();
+            crosbowDelay = true;
             yield return new WaitForSeconds(0.2f);
-            pistolDelay = false;
+            crosbowDelay = false;
         }
     }
-    public static void StartPistolDelayCoroutine()
+    public static void StartCrosbowDelayCoroutine()
     {
-        CoroutineManager.Instance.StartCoroutine(PistolDelayManage());
+        CoroutineManager.Instance.StartCoroutine(CrosbowDelayManage());
     }
 
-    public static void FirePistolBullet()
+    public static void FireCrosbowBullet()
     {
         if (dirBullet > 0) // 현재 총알이 남아있을 경우
-        {    
+        {
             BulletManager.BulletInfo bulletInfo = ObjectPoolManager.Dequeue(type);
             bulletInfo.Bullet.position = BulletLocation.position;
             bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles + addModifyAngle;
             bulletInfo.LiveTime = LiveTime;
             bullets.Add(bulletInfo);
-            
+
             dirBullet--;
             Debug.Log(dirBullet);
         }
@@ -105,5 +105,5 @@ public static class PistolBaseBullet
         BulletLocation = bulletLocation;
         GunRotation = gunRotation;
     }
-    
+
 }

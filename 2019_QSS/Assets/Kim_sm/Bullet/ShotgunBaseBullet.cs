@@ -6,7 +6,7 @@ public static class ShotgunBaseBullet
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
     public readonly static BulletManager.BulletType type = BulletManager.BulletType.Base;
-    private static readonly float LiveTime = 3f;
+    private static readonly float LiveTime = 0.5f; // 대략 5미터라고 잡아보자
     public static Transform BulletTransform;
     public static Transform GunRotation;
     private static Vector3 moveVector = new Vector3(0, 15, 0);
@@ -51,9 +51,9 @@ public static class ShotgunBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             reloadSwitch = false;
-            dirBullet = 15;
+            dirBullet = 5;
             Debug.Log("Reload Complete");
         }
         else if (dirBullet <= 0 && reloadSwitch) // 이미 재장전을 하고 있을 때는 재장전 중을 알려줌
@@ -73,7 +73,7 @@ public static class ShotgunBaseBullet
         {
             FireshotgunBullet();
             shotgunDelay = true;
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(1f);
             shotgunDelay = false;
         }
     }
