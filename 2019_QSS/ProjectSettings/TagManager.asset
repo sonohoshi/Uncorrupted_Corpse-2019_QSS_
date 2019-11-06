@@ -9,7 +9,7 @@ TagManager:
   - fdDoor
   - Target
   - Structures
-  - BaseBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

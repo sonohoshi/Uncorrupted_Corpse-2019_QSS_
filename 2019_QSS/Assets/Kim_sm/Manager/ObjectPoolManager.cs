@@ -32,34 +32,4 @@ public static class ObjectPoolManager
 
         return info;
     }
-    /*
-    public bool PushToPool(string itemName, GameObject item, Transform parent = null)
-    {
-        BulletManager pool = GetPoolItem(itemName);
-        if (pool == null)
-            return false;
-
-        pool.PushToPool(item, parent == null ? transform : parent);
-        return true;
-    }
-    public GameObject PopFromPool(string itemName, Transform parent = null)
-    {
-        BulletManager pool = GetPoolItem(itemName);
-        if (pool == null)
-            return null;
-
-        return pool.PopFromPool(parent);
-    }
-    BulletManager GetPoolItem(string itemName)
-    {
-        for (int ix = 0; ix < objectQueues.Count; ++ix)
-        {
-            if (objectQueues[ix].poolItemName.Equals(itemName))
-                return objectQueues[ix];
-        }
-
-        Debug.LogWarning("There's no matched pool list.");
-        return null;
-    }
-    */
 }

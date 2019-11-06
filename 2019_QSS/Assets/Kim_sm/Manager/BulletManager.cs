@@ -24,41 +24,18 @@ public static class BulletManager
 
         throw new System.NullReferenceException();
     }
-
-    /*
-    public string poolItemName = string.Empty;
-    public GameObject prefab = null;
-    public int poolCount = 0;
-    [SerializeField]
-    private List<GameObject> poolList = new List<GameObject>();
-
-    public void Initialize(Transform parent = null)
+    
+    public static float GetBulletDamage(BulletType type) // 태그로 관리 //기욱쿤 부탁해!!!
     {
-        for (int ix = 0; ix < poolCount; ++ix)
+        switch (type)
         {
-            poolList.Add(CreateItem(parent));
+            case BulletType.Base: return 0;
+            case BulletType.Silver: return 0;
+            case BulletType.BaseVolt: return 0;
+            case BulletType.SilverVolt: return 0;
         }
+
+        throw new System.NullReferenceException();
     }
-    public void PushToPool(GameObject item, Transform parent = null)
-    {
-        item.transform.SetParent(parent);
-        item.SetActive(false);
-        poolList.Add(item);
-    }
-    public GameObject PopFromPool(Transform parent = null)
-    {
-        if (poolList.Count == 0)
-            poolList.Add(CreateItem(parent));
-        GameObject item = poolList[0];
-        poolList.RemoveAt(0);
-        return item;
-    }
-    private GameObject CreateItem(Transform parent = null)
-    {
-        GameObject item = Object.Instantiate(prefab) as GameObject;
-        item.name = poolItemName;
-        item.transform.SetParent(parent);
-        item.SetActive(false);
-        return item;
-    }*/
+
 }

@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ShotgunBaseBullet
+public static class RifleBaseBullet
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
     public readonly static BulletManager.BulletType type = BulletManager.BulletType.Base;
-    private static readonly float LiveTime = 0.5f; // 대략 5미터라고 잡아보자
-    public static Transform BulletTransform;
+    private static readonly float LiveTime = 1.5f; // 대충 15미터라고 잡아보자.
+    public static Transform BulletLocation;
     public static Transform GunRotation;
-
     private static Vector3 moveVector = new Vector3(0, 50, 0);
-    private static int dirBullet = 5;
-    private static bool reloadSwitch = false;
-    private static bool shotgunDelay = false;
+    private static int dirBullet = 20;
 
-    private static readonly Vector3 addAngle = new Vector3(0, 0, -90);
-    //private static readonly float minAngle = -6;
+    private static bool reloadSwitch = false;
+    private static bool rifleDelay = false;
+
+    private static readonly Vector3 addModifyAngle = new Vector3(0, 0, -90);
 
     private static IEnumerator MoveBullet()
     {
@@ -36,7 +35,7 @@ public static class ShotgunBaseBullet
                         continue;
                     }
 
-                    bullets[i].Bullet.Translate(moveVector * Time.deltaTime * Random.Range(0.8f, 1.2f));
+                    bullets[i].Bullet.Translate(moveVector * Time.deltaTime);
 
                     bullets[i].LiveTime -= 0.01f;
                 }
@@ -51,9 +50,9 @@ public static class ShotgunBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
             reloadSwitch = false;
-            dirBullet = 5;
+            dirBullet = 20;
             Debug.Log("Reload Complete");
         }
         else if (dirBullet <= 0 && reloadSwitch) // 이미 재장전을 하고 있을 때는 재장전 중을 알려줌
@@ -67,54 +66,31 @@ public static class ShotgunBaseBullet
         CoroutineManager.Instance.StartCoroutine(MoveBullet());
     }
 
-    public static IEnumerator ShotgunDelayManage()
+    public static IEnumerator RifleDelayManage()
     {
-        if (!shotgunDelay)
+        if (!rifleDelay)
         {
-            FireshotgunBullet();
-            shotgunDelay = true;
-            yield return new WaitForSeconds(1f);
-            shotgunDelay = false;
+            FireRifleBullet();
+            rifleDelay = true;
+            yield return new WaitForSeconds(0.2f);
+            rifleDelay = false;
         }
     }
-    public static void StartshotgunDelayCoroutine()
+    public static void StartRifleDelayCoroutine()
     {
-        CoroutineManager.Instance.StartCoroutine(ShotgunDelayManage());
+        CoroutineManager.Instance.StartCoroutine(RifleDelayManage());
     }
 
-    private static void AddBullet()
-    {
-        float rand = -Random.Range(5, 14f);
-        Vector3 vec = new Vector3(0, 0, rand);
-
-        Debug.Log("집탄율 : " + rand);
-
-        for (; vec.z <= -rand; vec.z += -rand / 2)
-        {
-            BulletManager.BulletInfo info = ObjectPoolManager.Dequeue(type);
-            info.Bullet.position = BulletTransform.position;
-            info.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle + vec;
-            info.LiveTime = LiveTime;
-            if (vec.z == 0)
-            {
-                info.Bullet.eulerAngles += new Vector3(0,0,Random.Range(-rand * 0.1f, rand * 0.1f));
-            }
-            bullets.Add(info);
-        }
-    }
-
-    public static void FireshotgunBullet()
+    public static void FireRifleBullet()
     {
         if (dirBullet > 0) // 현재 총알이 남아있을 경우
         {
-            /*
             BulletManager.BulletInfo bulletInfo = ObjectPoolManager.Dequeue(type);
-            bulletInfo.Bullet.position = BulletTransform.position;
-            bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles;
+            bulletInfo.Bullet.position = BulletLocation.position;
+            bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles + addModifyAngle;
             bulletInfo.LiveTime = LiveTime;
             bullets.Add(bulletInfo);
-            */
-            AddBullet();
+
             dirBullet--;
             Debug.Log(dirBullet);
         }
@@ -126,8 +102,7 @@ public static class ShotgunBaseBullet
 
     public static void Initalize(Transform bulletLocation, Transform gunRotation)
     {
-        BulletTransform = bulletLocation;
+        BulletLocation = bulletLocation;
         GunRotation = gunRotation;
     }
-
 }

@@ -27,11 +27,13 @@ public class Attack : MonoBehaviour
         //PistolBaseBullet.ShotPistolBullet();
         //ShotgunBaseBullet.StartshotgunDelayCoroutine();
         CrosbowBaseBullet.StartCrosbowDelayCoroutine();
-        //BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
-        //bulletinfo.Bullet.position = BulletLocation.position;
-        //bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;
+        /*
+        BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
+        bulletinfo.Bullet.position = BulletLocation.position;
+        bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;
         
-        // Transform b = Instantiate<Transform>(bullet.transform, BulletLocation.position, GunRotation.rotation);
-        // b.eulerAngles += new Vector3(0, 0, -90);
+        Transform b = Instantiate<Transform>(bullet.transform, BulletLocation.position, GunRotation.rotation);
+        b.eulerAngles += new Vector3(0, 0, -90);
+        */
     }
 }

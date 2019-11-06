@@ -26,15 +26,18 @@ public static class CrosbowBaseBullet
                 // Debug.Log("MoveBullet looping");
                 for (int i = 0; i < bullets.Count; i++)
                 {
-                    if (bullets[i].LiveTime <= 0)
+                    if (bullets[i].LiveTime <= 0 || !bullets[i].Bullet.gameObject.activeSelf)
                     {
-                        bullets[i].Bullet.gameObject.SetActive(false);
+                        if (bullets[i].Bullet.gameObject.activeSelf)
+                        {
+                            bullets[i].Bullet.gameObject.SetActive(false);
+                        }
+
                         ObjectPoolManager.objectQueues[type].Enqueue(bullets[i]);
                         bullets.RemoveAt(i);
                         i--;
                         continue;
                     }
-
                     bullets[i].Bullet.Translate(moveVector * Time.deltaTime);
 
                     bullets[i].LiveTime -= 0.01f;
@@ -98,12 +101,13 @@ public static class CrosbowBaseBullet
         {
             CoroutineManager.Instance.StartCoroutine(ReloadBullet());
         }
-    }
 
+        BaseVoltPenetration.Instance.SetPenetrationSize();
+    }
     public static void Initalize(Transform bulletLocation, Transform gunRotation)
     {
         BulletLocation = bulletLocation;
         GunRotation = gunRotation;
     }
-
+    
 }
