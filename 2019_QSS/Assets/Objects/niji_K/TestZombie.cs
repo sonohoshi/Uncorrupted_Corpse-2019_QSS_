@@ -6,34 +6,33 @@ using System.Linq;
 public class TestZombie : Zombie
 {
     private GameObject target;
-    private int attack_delay = 20, frame_cnt = 0;
+    private float attack_delay = 0, frame_count = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         target = SelectTarget();
-        speed = 3;
-        Power = 10;
+        Begin(100, 0, 2, 10);
     }
     // Update is called once per frame
     void Update()
     {
-        if (target == null || frame_cnt % 120 == 0) target = SelectTarget();
+        if (target == null || frame_count % 2 == 0) target = SelectTarget();
         Vector3 dir = target.transform.position - transform.position;
         Move(dir);
-        frame_cnt++; attack_delay--;
+        frame_count += Time.deltaTime; 
+        attack_delay += Time.deltaTime;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (attack_delay <= 0)
+        if (attack_delay >= 0.5)
         {
             if (collision.gameObject.GetComponent<Structures>())
                 collision.gameObject.GetComponent<Structures>().Attacked(Power);
-            else{
-                //collision.gameObject.GetComponent<Player>().Attacked(Power);          TODO: 구현 필요
-            }
-            attack_delay = 20;
+            else if (collision.gameObject.GetComponent<Player>())
+                collision.gameObject.GetComponent<Player>().Attacked(Power);
+            attack_delay = 0;
         }
     }
 }

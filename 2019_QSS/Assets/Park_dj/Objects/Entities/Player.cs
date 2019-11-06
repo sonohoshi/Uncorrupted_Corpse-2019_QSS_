@@ -8,7 +8,7 @@ public class Player : Entity
     private float DistWeight;
     void Start() 
     {
-        Begin();
+        Begin(100, 5, 5, 10);
         BasePoint = 30;
         DistWeight = 1;
     }
@@ -51,5 +51,11 @@ public class Player : Entity
             NowFood_Health.problem = 0;
             Food_Depot.interaction = false;
         }
+    }
+
+    public void Attacked(float atk)
+    {
+        HP -= atk;
+        if (HP <= 0) { Destroy(gameObject); }
     }
 }

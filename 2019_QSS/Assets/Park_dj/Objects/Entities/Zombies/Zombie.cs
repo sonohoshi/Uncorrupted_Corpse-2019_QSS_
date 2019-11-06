@@ -12,7 +12,7 @@ public class Zombie : Entity
        CommonZombie,
        ZombieDog,
        MegalZombie,
-       BloodGunZombie,
+       BloodZombie,
        PoliceZombie
     }
 

@@ -30,7 +30,7 @@ public class Structures : MonoBehaviour
         return BasePoint - (distance * DistWeight);
     }
     public void Attacked(float atk) {
-        HP -= atk; Debug.Log(HP);
+        HP -= atk;
         if (HP <= 0) { Destroy(gameObject); }
     }
 }
