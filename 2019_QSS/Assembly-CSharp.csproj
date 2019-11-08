@@ -70,6 +70,7 @@
     <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Objects\niji_K\BloodPool.cs" />
     <Compile Include="Assets\Objects\niji_K\BloodZombie.cs" />
     <Compile Include="Assets\Objects\niji_K\Bread.cs" />
     <Compile Include="Assets\Objects\niji_K\CameraMovement.cs" />

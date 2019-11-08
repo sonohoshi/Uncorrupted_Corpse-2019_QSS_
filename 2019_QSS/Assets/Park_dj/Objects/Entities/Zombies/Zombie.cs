@@ -21,7 +21,7 @@ public class Zombie : Entity
         BigZzangZzangSanZombie
     }
 
-    public void Move(Vector3 dir) 
+    public void Move(Vector3 dir)
     {
         transform.Translate(dir.normalized * speed * Time.deltaTime);
         GetComponent<SpriteRenderer>().flipX = dir.x < 0;

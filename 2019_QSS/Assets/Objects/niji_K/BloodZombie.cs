@@ -20,10 +20,11 @@ public class BloodZombie : Zombie
         if (target == null || frame_count % 120 == 0) target = SelectTarget();
         Vector3 dir = target.transform.position - transform.position;
         if(attack_delay <= 4) Move(dir);
+
         attack_delay -= Time.deltaTime;
 
         if (attack_delay <= 0) {
-            Instantiate(blood_pool, transform.position + new Vector3(0, (dir.y > 0 ? 1 : -1)), new Quaternion(0, 0, 0, 0));
+            Instantiate(blood_pool, transform.position + new Vector3((dir.y > 0 ? -0.8f : 0.8f), 0.2f, 0), new Quaternion(0, 0, 0, 0));
             attack_delay = 5;
         }
     }

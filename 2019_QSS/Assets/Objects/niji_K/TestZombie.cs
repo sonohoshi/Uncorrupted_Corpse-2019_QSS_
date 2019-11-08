@@ -6,7 +6,7 @@ using System.Linq;
 public class TestZombie : Zombie
 {
     private GameObject target;
-    private float attack_delay = 0, frame_count = 0;
+    private float attack_delay = 0, time_count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,14 @@ public class TestZombie : Zombie
     // Update is called once per frame
     void Update()
     {
-        if (target == null || frame_count % 2 == 0) target = SelectTarget();
-        Vector3 dir = target.transform.position - transform.position;
+        Vector3 dir;
+        if (target == null || time_count >= 2){
+            target = SelectTarget();
+            time_count = 0;
+        }
+        dir = target.transform.position - transform.position;
         Move(dir);
-        frame_count += Time.deltaTime; 
+        time_count += Time.deltaTime; 
         attack_delay += Time.deltaTime;
     }
 

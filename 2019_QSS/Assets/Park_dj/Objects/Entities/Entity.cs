@@ -6,10 +6,10 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     //protected Transform transform;
-    protected static float HP;
-    protected static float speed;
-    protected static float DP;
-    protected static float Power;
+    protected float HP;
+    protected float speed;
+    protected float DP;
+    protected float Power;
 
     protected void Move()
     {
@@ -31,7 +31,7 @@ public class Entity : MonoBehaviour
     }
 
     //HP, DP 등을 불러올 필요가 있을 때는 이걸 씁시다. (캡슐화)
-    public static float[] GetStats() {
+    public float[] GetStats() {
         float[] stat = { HP, speed, DP, Power};
         return stat;
     }
