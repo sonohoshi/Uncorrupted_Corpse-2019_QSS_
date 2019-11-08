@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Food_Depot : Structures
 {
-    private GameObject F_D_Interection;
+    public GameObject F_D_Interection;
     public static bool interaction = false;
     public static int food = 1000;
+    public static bool FoodDepotOnOff = false;
 
     private void Start()
     {   
         Begin();
-        HP = 2000;    
+        HP = 2000;
+        F_D_Interection.SetActive(false);
     }
-        
-    void Update()
+
+    private void OnMouseUp()
     {
-        if(interaction == true)
+        if (interaction == false && CraftingTable.OnOffTable == false && PressButton.press == false)
         {
-          //  F_D_Interection.SetActive(true);
+            FoodDepotOnOff = true;
+            F_D_Interection.SetActive(true);
+            NowFood_Health.problem = 0;
         }
-        else if(interaction == false)
-        {
-           // F_D_Interection.SetActive(false);
-        }
-    }       
+    }
 }

@@ -30,8 +30,8 @@ public class TestZombie : Zombie
             float targetdist = dir.magnitude;
             float cmpdist = (obj.transform.position - transform.position).magnitude;
 
-            if (obj.GetComponent<Player>()) {
-                if (obj.GetComponent<Player>().GetPriorityPoints(cmpdist) > target.GetComponent<Player>().GetPriorityPoints(targetdist))
+            if (obj.GetComponent<player>()) {
+                if (obj.GetComponent<player>().GetPriorityPoints(cmpdist) > target.GetComponent<player>().GetPriorityPoints(targetdist))
                 {
                     target = obj;
                 }

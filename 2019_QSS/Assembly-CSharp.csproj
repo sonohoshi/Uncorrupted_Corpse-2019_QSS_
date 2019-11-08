@@ -62,76 +62,134 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Kim_sm\Dummy\Enemy.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\Attack.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\FindZombie.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponManager.cs" />
+    <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Objects\Entities\Entity.cs" />
-    <Compile Include="Assets\Objects\Entities\Player.cs" />
-    <Compile Include="Assets\Objects\Entities\Zombies\Zombie.cs" />
-    <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
-    <Compile Include="Assets\Objects\Items\Items.cs" />
-    <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
     <Compile Include="Assets\Objects\niji_K\Bread.cs" />
     <Compile Include="Assets\Objects\niji_K\TestZombie.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\TakeFood.cs" />
-    <Compile Include="Assets\Objects\Structures\Structures.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Entity.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\player.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Zombies\Zombie.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\Armor.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\Clothes.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\SilverArmor.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\BasicWeaponList\AssaultRifle.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\BasicWeaponList\Bat.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\BasicWeaponList\Crossbow.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\BasicWeaponList\Handgun.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\BasicWeaponList\Shotgun.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\GetItem.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\InventorySlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\PressButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\UpperButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\WearItemButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\WearItems.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Items.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Branch.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\EmptyCartridge.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Fabric.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glass.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glue.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Gunpowder.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\LaserPointer.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Lighter.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Nail.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\RadioactivityX.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\ScrapMetal.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Silver.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Spring.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Thread.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Wire.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\ConsumptionBullet\Bolt.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\ConsumptionBullet\Bullet.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\ConsumptionBullet\SilverBolt.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\ConsumptionBullet\SilverBullet.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\DotSite.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\OnetimeWeaponItemList\FlameBottle.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\OnetimeWeaponItemList\FragmentMine.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\OnetimeWeaponItemList\Grenade.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\CollapseCrossbow.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\CollapseShotGun.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\LaserAssaultRifle.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\LaserHandGun.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\Lightsaber.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\ReinforcedBat.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItem\Weapon\ReinforcedCrossbow.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTable.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableTabButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\ErrorMessageExitButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\MakeItemButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\RecipeButton\ExitRecipeUIButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\RecipeButton\Recipe.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\RecipeButton\ShowRecipeButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\Food_Depot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\Food_Depot_ExitButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\NowFood_Health.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\TakeFood.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -311,13 +369,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/동아리관련/qss/1-project/2019_QSS_/2019_QSS/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

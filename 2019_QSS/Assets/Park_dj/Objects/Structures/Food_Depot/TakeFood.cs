@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TakeFood : MonoBehaviour
 {
     public InputField InputField;
+    int Now_HealthPoint;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Return))
@@ -15,7 +16,7 @@ public class TakeFood : MonoBehaviour
                 NowFood_Health.problem = 1;
                 InputField.text = "\0";
             }       
-            else if(Player.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
+            else if(player.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
             {
                 NowFood_Health.problem = 2;
                 InputField.text = "\0";
@@ -24,7 +25,7 @@ public class TakeFood : MonoBehaviour
             {
                 NowFood_Health.problem = 0;
                 Food_Depot.food -= int.Parse(InputField.text);
-                Player.GetStats()[0] += int.Parse(InputField.text) * 3;
+                /*player.PlusHealth(int.Parse(InputField.text) * 3);*/
                 InputField.text = "\0";
             }
         }

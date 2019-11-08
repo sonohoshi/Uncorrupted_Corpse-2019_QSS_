@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Entity
+public class player : Entity
 {
     private float BasePoint;
     private float DistWeight;

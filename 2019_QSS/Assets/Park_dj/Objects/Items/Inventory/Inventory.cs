@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    //나중에 효과음 넣기 클릭할 때 하얀색 테두리로 강조하기
+    //나중에 효과음 넣기
 
 
     public static int TabType = 1;
+
+    public GameObject WearItemButtonUI;
 
     public GameObject MaterialGridslot;
     public GameObject WeaponGridslot;
@@ -44,8 +46,7 @@ public class Inventory : MonoBehaviour
                 ArmorGridslot.SetActive(true);
                 break;
         }
-    } 
-
+    }
     private void Update()
     {
         if (PressButton.press == true)
@@ -57,5 +58,10 @@ public class Inventory : MonoBehaviour
         {
             TabType = 1;
         }
+
+        if ((TabType == 2 || TabType == 3 || TabType == 4) && InventorySlot.CanWearItem == true)
+            WearItemButtonUI.SetActive(true);
+        else
+            WearItemButtonUI.SetActive(false);
     }
 }
