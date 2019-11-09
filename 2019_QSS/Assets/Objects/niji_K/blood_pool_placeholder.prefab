@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8138272152058377133}
   - component: {fileID: 7690149866506506749}
   - component: {fileID: 6810613847266043836}
-  - component: {fileID: 3484390962335927409}
+  - component: {fileID: 6176220855499025711}
   m_Layer: 0
   m_Name: blood_pool_placeholder
   m_TagString: Untagged
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfaac3d58abccf4c8a56f3302535562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &3484390962335927409
+--- !u!50 &6176220855499025711
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -131,4 +131,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 0

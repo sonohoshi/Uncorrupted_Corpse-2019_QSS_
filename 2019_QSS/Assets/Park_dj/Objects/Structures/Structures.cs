@@ -30,6 +30,13 @@ public class Structures : MonoBehaviour
     public float GetPriorityPoints(float distance) {
         return BasePoint - (distance * DistWeight);
     }
+
+    public float[] GetStats()
+    {
+        float[] stat = { HP, DP, BasePoint, DistWeight };
+        return stat;
+    }
+
     public void Attacked(float atk) {
         HP -= atk - DP;
         if (HP <= 0) { Destroy(gameObject); }

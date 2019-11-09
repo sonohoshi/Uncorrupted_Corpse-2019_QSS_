@@ -24,7 +24,7 @@ public class BloodZombie : Zombie
         attack_delay -= Time.deltaTime;
 
         if (attack_delay <= 0) {
-            Instantiate(blood_pool, transform.position + new Vector3((dir.y > 0 ? -0.8f : 0.8f), 0.2f, 0), new Quaternion(0, 0, 0, 0));
+            Instantiate(blood_pool, transform.position + new Vector3((dir.y > 0 ? 0.8f : -0.8f), 0.2f, 0.1f), new Quaternion(0, 0, 0, 0));
             attack_delay = 5;
         }
     }

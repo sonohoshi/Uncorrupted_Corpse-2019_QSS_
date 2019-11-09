@@ -20,12 +20,12 @@ public class BloodPool : MonoBehaviour
         decay_time -= Time.deltaTime;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
 
         if (collision.gameObject.GetComponent<Structures>())
-            collision.gameObject.GetComponent<Structures>().Attacked(0.1f);
+            collision.gameObject.GetComponent<Structures>().Attacked(collision.gameObject.GetComponent<Structures>().GetStats()[1] + 0.1f);
         else if (collision.gameObject.GetComponent<Player>())
-            collision.gameObject.GetComponent<Player>().Attacked(0.1f);
+            collision.gameObject.GetComponent<Player>().Attacked(collision.gameObject.GetComponent<Entity>().GetStats()[2] + 0.1f);
     }
 }
