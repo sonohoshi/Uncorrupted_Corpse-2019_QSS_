@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3006602828253817448}
   m_Layer: 0
   m_Name: BaseBullet
-  m_TagString: BaseBullet
+  m_TagString: BulletOrVolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,13 +9,11 @@ public class SilverVoltPenetration : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            penetrationSize -= collision.attachedRigidbody.mass;
+
             if (penetrationSize <= 0)
             {
                 gameObject.SetActive(false);
-            }
-            else if (penetrationSize > 0)
-            {
-                penetrationSize -= collision.attachedRigidbody.mass; // mass == 방어도
             }
         }
     }
