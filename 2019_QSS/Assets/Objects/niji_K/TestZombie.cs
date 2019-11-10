@@ -6,50 +6,37 @@ using System.Linq;
 public class TestZombie : Zombie
 {
     private GameObject target;
-    private GameObject[] list;
-    private int cnt = 0;
+    private float attack_delay = 0, time_count = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        speed = 3;
-        Power = 10;
+        target = SelectTarget();
+        Begin(100, 0, 2, 10);
     }
     // Update is called once per frame
     void Update()
     {
-        //타깃을 모아놓은 리스트.
-        GameObject[] list = GameObject.FindGameObjectsWithTag("Structures");
-        list = list.Concat(GameObject.FindGameObjectsWithTag("FoodDepot")).ToArray();
-        list = list.Concat(GameObject.FindGameObjectsWithTag("Player")).ToArray();
-        target = list[0];
-
-        Vector3 dir = new Vector3();
-        foreach (GameObject obj in list) {
-            dir = (target.transform.position - transform.position);
-
-            float targetdist = dir.magnitude;
-            float cmpdist = (obj.transform.position - transform.position).magnitude;
-
-            if (obj.GetComponent<Player>()) {
-                if (obj.GetComponent<Player>().GetPriorityPoints(cmpdist) > target.GetComponent<Player>().GetPriorityPoints(targetdist))
-                {
-                    target = obj;
-                }
-            }
-            else if (obj.GetComponent<Structures>().GetPriorityPoints(cmpdist) > target.GetComponent<Structures>().GetPriorityPoints(targetdist)) {
-                target = obj;
-            }
+        Vector3 dir;
+        if (target == null || time_count >= 2){
+            target = SelectTarget();
+            time_count = 0;
         }
-
-        transform.Translate(dir.normalized * speed * Time.deltaTime);
+        dir = target.transform.position - transform.position;
+        Move(dir);
+        time_count += Time.deltaTime; 
+        attack_delay += Time.deltaTime;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        cnt++;
-        if (cnt % 5 == 0)
+        if (attack_delay >= 0.5)
         {
-            collision.gameObject.GetComponent<Structures>().Attacked(Power);
+            if (collision.gameObject.GetComponent<Structures>())
+                collision.gameObject.GetComponent<Structures>().Attacked(Power);
+            else if (collision.gameObject.GetComponent<Player>())
+                collision.gameObject.GetComponent<Player>().Attacked(Power);
+            attack_delay = 0;
         }
     }
 }

@@ -8,9 +8,17 @@ public class Player : Entity
     private float DistWeight;
     void Start() 
     {
-        Begin();
-        BasePoint = 30;
-        DistWeight = 1;
+        Begin(100, 5, 5, 10, 30, 1);
+    }
+    protected void Begin(float hp, float dp, float sp, float pow, float bp, float dist)
+    {
+        HP = hp;
+        DP = dp;
+        speed = sp;
+        Power = pow;
+        BasePoint = bp;
+        DistWeight = dist;
+        GetComponent<Rigidbody2D>().mass = DP;
     }
 
     private void Update()
@@ -51,5 +59,11 @@ public class Player : Entity
             NowFood_Health.problem = 0;
             Food_Depot.interaction = false;
         }
+    }
+
+    public void Attacked(float atk)
+    {
+        HP -= atk - DP; Debug.Log(HP);
+        if (HP <= 0) { Destroy(gameObject); }
     }
 }

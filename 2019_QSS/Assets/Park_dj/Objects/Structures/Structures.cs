@@ -19,18 +19,26 @@ public class Structures : MonoBehaviour
         BigTurret
     }
 
-    protected void Begin()
+    protected void Begin(float hp, float dp, float bp, float dist)
     {
-        HP = 100;
-        DP = 50;
-        BasePoint = 100;
-        DistWeight = 1;
+        HP = hp;
+        DP = dp;
+        BasePoint = bp;
+        DistWeight = dist;
+        GetComponent<Rigidbody2D>().mass = DP;
     }
     public float GetPriorityPoints(float distance) {
         return BasePoint - (distance * DistWeight);
     }
+
+    public float[] GetStats()
+    {
+        float[] stat = { HP, DP, BasePoint, DistWeight };
+        return stat;
+    }
+
     public void Attacked(float atk) {
-        HP -= atk; Debug.Log(HP);
+        HP -= atk - DP;
         if (HP <= 0) { Destroy(gameObject); }
     }
 }

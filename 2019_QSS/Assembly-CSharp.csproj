@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +52,9 @@
     <UnityVersion>2019.2.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -62,20 +63,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Kim_sm\Dummy\Enemy.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\Attack.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\FindZombie.cs" />
+    <Compile Include="Assets\Kim_sm\PlayerBehavior\WeaponManager.cs" />
+    <Compile Include="Assets\Kim_sm\UI\Scripts\AttackPrepare.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\Joystick.cs" />
     <Compile Include="Assets\Kim_sm\UI\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Objects\Entities\Entity.cs" />
-    <Compile Include="Assets\Objects\Entities\Player.cs" />
-    <Compile Include="Assets\Objects\Entities\Zombies\Zombie.cs" />
-    <Compile Include="Assets\Objects\Items\Armor\Armor.cs" />
-    <Compile Include="Assets\Objects\Items\Items.cs" />
-    <Compile Include="Assets\Objects\Items\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Objects\niji_K\BloodPool.cs" />
+    <Compile Include="Assets\Objects\niji_K\BloodZombie.cs" />
     <Compile Include="Assets\Objects\niji_K\Bread.cs" />
+    <Compile Include="Assets\Objects\niji_K\CameraMovement.cs" />
     <Compile Include="Assets\Objects\niji_K\TestZombie.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\Food_Depot.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\NowFood_Health.cs" />
-    <Compile Include="Assets\Objects\Structures\Food_Depot\TakeFood.cs" />
-    <Compile Include="Assets\Objects\Structures\Structures.cs" />
+    <Compile Include="Assets\Objects\niji_K\ZombieSpawner.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Entity.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Player.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Entities\Zombies\Zombie.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Armor\Armor.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\GetItem.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\InventorySlot\InventorySlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\PressButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Inventory\UpperUI\UpperButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\Items.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Branch.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\EmptyCartridge.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Fabric.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glass.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Glue.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Gunpowder.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\LaserPointer.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Lighter.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Nail.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\RadioactivityX.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\ScrapMetal.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Silver.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Spring.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Thread.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\MaterialItemList\Wire.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Items\UpgradeItems\UpgradeItems.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CombinationItemSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTable.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableButton.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftingTableSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\CraftingTable\CraftSlot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\Food_Depot.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\NowFood_Health.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Food_Depot\TakeFood.cs" />
+    <Compile Include="Assets\Park_dj\Objects\Structures\Structures.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/user/Desktop/Unity/2019_QSS_/2019_QSS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

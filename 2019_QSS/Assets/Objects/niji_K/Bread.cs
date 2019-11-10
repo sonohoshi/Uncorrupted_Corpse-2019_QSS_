@@ -7,7 +7,7 @@ public class Bread : Structures
     // Start is called before the first frame update
     void Start()
     {
-        Begin();
+        Begin(100, 0, 10, 1);
         DP = 100;
     }
 

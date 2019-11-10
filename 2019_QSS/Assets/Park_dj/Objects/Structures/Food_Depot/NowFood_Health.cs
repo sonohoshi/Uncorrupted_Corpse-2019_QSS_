@@ -8,11 +8,12 @@ public class NowFood_Health : MonoBehaviour
     string Food;
     string Health;
     public Text TextObject;
+    public Player plr;
     static public int problem = 0;
     void Update()
     {
         string Food = Food_Depot.food.ToString();
-        string Health = (Player.GetStats())[0].ToString();
+        string Health = (plr.GetStats())[0].ToString();
         if (problem == 0)
         {
             TextObject.text = "현재 가지고 있는 식량 : " + Food + "\n"
