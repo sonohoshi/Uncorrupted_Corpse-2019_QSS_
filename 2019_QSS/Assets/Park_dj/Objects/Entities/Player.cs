@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : Entity
+public class Player : Entity
 {
     private float BasePoint;
     private float DistWeight;
-    void Start() 
+    void Start()
     {
         Begin(100, 5, 5, 10, 30, 1);
     }
@@ -36,7 +36,7 @@ public class player : Entity
 
     }
 
-    public static void PlusHealth(int heal)
+    public void PlusHealth(int heal)
     {
         HP += heal;
     }

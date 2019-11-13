@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 46014880}
   - component: {fileID: 46014881}
   - component: {fileID: 46014879}
+  - component: {fileID: 46014882}
   m_Layer: 0
   m_Name: FoodDepot
   m_TagString: Untagged
@@ -611,12 +612,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b67aa99f2ca76824894d5479aca73075, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c0ea48ab56539b4eaae69f2cbfd8f2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 6.8, y: 10.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -635,6 +636,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   F_D_Interection: {fileID: 770807796}
+--- !u!50 &46014882
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46014877}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &50338291
 GameObject:
   m_ObjectHideFlags: 0
@@ -11096,6 +11118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextObject: {fileID: 1045132906}
+  plr: {fileID: 0}
 --- !u!222 &1045132908
 CanvasRenderer:
   m_ObjectHideFlags: 0

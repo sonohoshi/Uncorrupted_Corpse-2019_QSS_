@@ -7,6 +7,7 @@ public class TakeFood : MonoBehaviour
 {
     public InputField InputField;
     int Now_HealthPoint;
+    Player plr;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Return))
@@ -16,7 +17,7 @@ public class TakeFood : MonoBehaviour
                 NowFood_Health.problem = 1;
                 InputField.text = "\0";
             }       
-            else if(player.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
+            else if(plr.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
             {
                 NowFood_Health.problem = 2;
                 InputField.text = "\0";
