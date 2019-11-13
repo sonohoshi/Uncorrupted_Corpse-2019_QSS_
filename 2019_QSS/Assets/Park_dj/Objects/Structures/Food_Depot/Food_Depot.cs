@@ -9,7 +9,7 @@ public class Food_Depot : Structures
     public static int food = 1000;
     public static bool FoodDepotOnOff = false;
 
-    private void Start()
+    private void Awake()
     {   
         F_D_Interection.SetActive(false);
         Begin(2000, 1, 0, 0);

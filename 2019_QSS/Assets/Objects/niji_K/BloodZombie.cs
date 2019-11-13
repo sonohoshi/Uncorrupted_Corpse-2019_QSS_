@@ -11,7 +11,7 @@ public class BloodZombie : Zombie
     // Start is called before the first frame update
     void Start()
     {
-        target = SelectTarget(); 
+        target = SelectTarget();
         Begin(80, 0, 2, 15);
     }
     // Update is called once per frame

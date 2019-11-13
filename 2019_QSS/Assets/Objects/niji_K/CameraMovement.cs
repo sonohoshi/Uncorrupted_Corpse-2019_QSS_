@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    GameObject plr; //플레이어
+    public GameObject plr; //플레이어
     // Start is called before the first frame update
     void Start()
     {
