@@ -12,7 +12,7 @@ public class PressButton : MonoBehaviour
 
 
     public static bool press = false;
-    private void Start()
+    private void Awake()
     {
         InventoryUI.SetActive(false);
     }

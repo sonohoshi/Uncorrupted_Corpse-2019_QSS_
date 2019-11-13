@@ -31,7 +31,12 @@ public class FindZombie : MonoBehaviour
                 closestEnemy = currentEnemy;
             }
         }
-        Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
-        return closestEnemy.transform;
+        if(closestEnemy != null)
+        {
+            Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
+            return closestEnemy.transform;
+
+        }
+        return null;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseVoltPenetration : MonoBehaviour
 {
     private float penetrationSize = 30;
+    private float bulletDamage;
     public static BaseVoltPenetration Instance { get; private set; }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,11 +24,20 @@ public class BaseVoltPenetration : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        DamageInitialize();
     }
 
     public void SetPenetrationSize()
     {
         penetrationSize = 30;
     }
+    private void DamageInitialize()
+    {
+        bulletDamage = 50f;
+    }
 
+    public float GetBulletDamage()
+    {
+        return bulletDamage;
+    }
 }

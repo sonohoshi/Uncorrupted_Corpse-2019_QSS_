@@ -28,12 +28,25 @@ public class TestZombie : Zombie
         attack_delay += Time.deltaTime;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("BulletOrVolt"))
+        {
+            if (collision.gameObject.GetComponent<BulletPenetration>())
+                gameObject.GetComponent<Zombie>().Attacked(collision.gameObject.GetComponent<BulletPenetration>().GetBulletDamage());
+            if (collision.gameObject.GetComponent<BaseVoltPenetration>() || collision.gameObject.GetComponent<SilverVoltPenetration>())
+                gameObject.GetComponent<Zombie>().Attacked(collision.gameObject.GetComponent<BaseVoltPenetration>().GetBulletDamage());
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (attack_delay >= 0.5)
         {
             if (collision.gameObject.GetComponent<Structures>())
                 collision.gameObject.GetComponent<Structures>().Attacked(Power);
+            else if (collision.gameObject.GetComponent<Food_Depot>())
+                collision.gameObject.GetComponent<Food_Depot>().Attacked(Power);
             else if (collision.gameObject.GetComponent<Player>())
                 collision.gameObject.GetComponent<Player>().Attacked(Power);
             attack_delay = 0;

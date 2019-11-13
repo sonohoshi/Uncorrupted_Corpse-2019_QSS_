@@ -24,12 +24,16 @@ public static class ShotgunBaseBullet
         {
             while (bullets.Count > 0)
             {
-                // Debug.Log("MoveBullet looping");
+                //Debug.Log("MoveBullet looping");
                 for (int i = 0; i < bullets.Count; i++)
                 {
-                    if (bullets[i].LiveTime <= 0)
+                    if (bullets[i].LiveTime <= 0 || !bullets[i].Bullet.gameObject.activeSelf)
                     {
-                        bullets[i].Bullet.gameObject.SetActive(false);
+                        if (bullets[i].Bullet.gameObject.activeSelf)
+                        {
+                            bullets[i].Bullet.gameObject.SetActive(false);
+                        }
+
                         ObjectPoolManager.objectQueues[type].Enqueue(bullets[i]);
                         bullets.RemoveAt(i);
                         i--;
@@ -37,7 +41,6 @@ public static class ShotgunBaseBullet
                     }
 
                     bullets[i].Bullet.Translate(moveVector * Time.deltaTime * Random.Range(0.8f, 1.2f));
-
                     bullets[i].LiveTime -= 0.01f;
                 }
                 yield return new WaitForSeconds(0.01f);

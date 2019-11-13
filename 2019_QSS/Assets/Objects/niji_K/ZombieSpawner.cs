@@ -41,7 +41,7 @@ public class ZombieSpawner : MonoBehaviour
                 float angle = Random.Range(-4 * Mathf.PI, 4 * Mathf.PI);
                 Vector3 pos = transform.position;
                 pos += new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * dist;
-                Instantiate(zombie[Random.Range(0, zombie.Length)], pos, new Quaternion(0, 0, 0, 0));
+                Instantiate(zombie[Random.Range(0, zombie.Length)], pos, new Quaternion(0, 0, 0, 0)); // 좀비 하나 죽였더니 여기서 에러남
                 time_count = 0; zombie_count--;
             }
         }

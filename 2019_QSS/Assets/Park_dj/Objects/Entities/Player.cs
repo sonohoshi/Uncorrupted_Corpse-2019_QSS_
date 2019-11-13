@@ -8,7 +8,7 @@ public class Player : Entity
     private float DistWeight;
     void Start()
     {
-        Begin(100, 5, 5, 10, 30, 1);
+        Begin(500, 5, 5, 10, 30, 1);
     }
     protected void Begin(float hp, float dp, float sp, float pow, float bp, float dist)
     {
@@ -44,6 +44,6 @@ public class Player : Entity
     public void Attacked(float atk)
     {
         HP -= atk - DP; Debug.Log(HP);
-        if (HP <= 0) { Destroy(gameObject); }
+        if (HP <= 0) { Destroy(transform.parent.gameObject); }
     }
 }

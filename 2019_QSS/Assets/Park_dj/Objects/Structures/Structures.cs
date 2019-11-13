@@ -38,7 +38,7 @@ public class Structures : MonoBehaviour
     }
 
     public void Attacked(float atk) {
-        HP -= atk - DP;
+        HP -= atk - DP; Debug.Log(HP);
         if (HP <= 0) { Destroy(gameObject); }
     }
 }

@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMove();
-        /*playerMoveAnimator.SetBool("IsMove", DistinctionMoving());*/
+        playerMoveAnimator.SetBool("IsMove", DistinctionMoving());
     }
 
     public void HandleInput()

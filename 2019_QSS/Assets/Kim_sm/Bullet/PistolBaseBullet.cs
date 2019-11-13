@@ -26,9 +26,13 @@ public static class PistolBaseBullet
                 // Debug.Log("MoveBullet looping");
                 for (int i = 0; i < bullets.Count; i++)
                 {
-                    if (bullets[i].LiveTime <= 0)
+                    if (bullets[i].LiveTime <= 0 || !bullets[i].Bullet.gameObject.activeSelf)
                     {
-                        bullets[i].Bullet.gameObject.SetActive(false);
+                        if (bullets[i].Bullet.gameObject.activeSelf)
+                        {
+                            bullets[i].Bullet.gameObject.SetActive(false);
+                        }
+
                         ObjectPoolManager.objectQueues[type].Enqueue(bullets[i]);
                         bullets.RemoveAt(i);
                         i--;
@@ -89,6 +93,7 @@ public static class PistolBaseBullet
             bulletInfo.Bullet.position = BulletLocation.position;
             bulletInfo.Bullet.eulerAngles = GunRotation.eulerAngles + addModifyAngle;
             bulletInfo.LiveTime = LiveTime;
+            
             bullets.Add(bulletInfo);
             
             dirBullet--;
@@ -105,5 +110,5 @@ public static class PistolBaseBullet
         BulletLocation = bulletLocation;
         GunRotation = gunRotation;
     }
-    
+
 }

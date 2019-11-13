@@ -53,19 +53,24 @@ public class Zombie : Entity
             //플레이어? 구조물?
             if (obj.GetComponent<Player>())
             {
-                if (obj.GetComponent<Player>().GetPriorityPoints(cmpdist) > prePriority )
+                if (obj.GetComponent<Player>().GetPriorityPoints(cmpdist) > prePriority)
                 {
                     target = obj;
                     prePriority = target.GetComponent<Player>().GetPriorityPoints(cmpdist);
                 }
             }
-            else if (obj.GetComponent<Structures>().GetPriorityPoints(cmpdist) > prePriority )
+            else if (obj.GetComponent<Structures>().GetPriorityPoints(cmpdist) > prePriority)
             {
                 target = obj;
                 prePriority = target.GetComponent<Structures>().GetPriorityPoints(cmpdist);
             }
         }
-
         return target;
+    }
+
+    public void Attacked(float atk)
+    {
+        HP -= atk - (DP * 0.01f * atk); Debug.Log(HP);
+        if (HP <= 0) { Destroy(gameObject); }
     }
 }
