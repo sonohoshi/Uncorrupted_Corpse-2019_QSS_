@@ -194,7 +194,7 @@ public class MakeItemButton : MonoBehaviour
                     Silver.cnt--;
                     SilverArmor.cnt++;
                     ItemCnt.text = "X " + SilverArmor.cnt.ToString();
-                    MakeArmor = 3;
+                    MakeArmor = 3 ;
                 }
                 CanMakeArmor = 0;
             }// 갑옷 제작 및 제료 삭제

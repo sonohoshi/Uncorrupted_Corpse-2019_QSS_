@@ -14,7 +14,7 @@ public class GetItem : MonoBehaviour
     //업그레이드 된 아이템을 만들 때
     bool MakeUpgradeItem;
     //얻은 아이템을 알려주는 알림창 딜레이
-    bool delaytime = true;
+    bool delaytime;
     float time;
 
     //일반 아이템을 먹을 시에 생기는 램덤값

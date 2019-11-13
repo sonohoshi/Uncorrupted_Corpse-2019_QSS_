@@ -11,9 +11,8 @@ public class Food_Depot : Structures
 
     private void Start()
     {   
-        Begin();
-        HP = 2000;
         F_D_Interection.SetActive(false);
+        Begin(2000, 1, 0, 0);
     }
 
     private void OnMouseUp()

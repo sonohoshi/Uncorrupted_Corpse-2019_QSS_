@@ -5,29 +5,33 @@ using UnityEngine.UI;
 
 public class TakeFood : MonoBehaviour
 {
-    public InputField InputField;
+    public Player plr;
+    public Text TakeFoodCntText;
     int Now_HealthPoint;
+    public static bool OKSign = false;
+    public static int _TakeFood = 0;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
+        TakeFoodCntText.text = _TakeFood.ToString();
+        if (OKSign)
         {
-            if(Food_Depot.food - int.Parse(InputField.text) < 0)
+            if (Food_Depot.food - _TakeFood < 0)
             {
                 NowFood_Health.problem = 1;
-                InputField.text = "\0";
-            }       
-            else if(player.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
+            }
+            else if (plr.GetStats()[0] + _TakeFood * 3 > 500)
             {
                 NowFood_Health.problem = 2;
-                InputField.text = "\0";
             }   
             else
             {
                 NowFood_Health.problem = 0;
-                Food_Depot.food -= int.Parse(InputField.text);
-                /*player.PlusHealth(int.Parse(InputField.text) * 3);*/
-                InputField.text = "\0";
+                plr.PlusHealth(_TakeFood * 3);
+                Food_Depot.food -= _TakeFood;
             }
+            _TakeFood = 0;
+            OKSign = false;
         }
     }
+    
 }
