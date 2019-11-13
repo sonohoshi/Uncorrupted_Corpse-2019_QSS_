@@ -11,8 +11,8 @@ public class Food_Depot : Structures
 
     private void Awake()
     {   
-        Begin(2000, 1, 1, 1);
         F_D_Interection.SetActive(false);
+        Begin(2000, 1, 0, 0);
     }
 
     private void OnMouseUp()
