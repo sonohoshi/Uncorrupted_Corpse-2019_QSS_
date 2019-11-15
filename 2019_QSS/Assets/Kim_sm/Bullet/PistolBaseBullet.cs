@@ -54,6 +54,7 @@ public static class PistolBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
+            Attack.SetReloadTime(1f);
             yield return new WaitForSeconds(1f);
             reloadSwitch = false;
             dirBullet = 15;

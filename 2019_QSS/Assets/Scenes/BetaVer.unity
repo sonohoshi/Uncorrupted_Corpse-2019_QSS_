@@ -18196,6 +18196,7 @@ GameObject:
   - component: {fileID: 1441136662}
   - component: {fileID: 1441136661}
   - component: {fileID: 1441136660}
+  - component: {fileID: 1441136663}
   m_Layer: 5
   m_Name: HealthPointSlider
   m_TagString: Untagged
@@ -18212,7 +18213,7 @@ RectTransform:
   m_GameObject: {fileID: 1441136658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 500, y: 131, z: 0}
+  m_LocalScale: {x: 400, y: 104.8, z: 0}
   m_Children:
   - {fileID: 419871704}
   m_Father: {fileID: 1650286247}
@@ -18220,7 +18221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231, y: 213}
+  m_AnchoredPosition: {x: -203, y: 166}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441136660
@@ -18310,6 +18311,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1441136663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441136658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e02417c2a016e4eb3276bdf8ec473b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1441136660}
+  plr: {fileID: 1147438305}
 --- !u!1 &1443525462
 GameObject:
   m_ObjectHideFlags: 0
@@ -18347,7 +18362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 292, y: -108}
+  m_AnchoredPosition: {x: 348, y: -169}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443525464
@@ -18416,13 +18431,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5c2b94f98c2432d4bbfc630f057cc53d, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1443525466
@@ -18445,6 +18460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad2f478a713c8243bc2c509fa7bceb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDown: {fileID: 1443525465}
   BulletDelay: 3
 --- !u!58 &1443525468
 CircleCollider2D:
@@ -21347,7 +21363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -25440,7 +25456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321.3, y: -121.7}
+  m_AnchoredPosition: {x: -289, y: -121}
   m_SizeDelta: {x: 12, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886167301

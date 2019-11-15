@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Attack : MonoBehaviour
 {
+    public Image coolDown;
+
     private GameObject player;
     private GameObject pistol;
     private GameObject rifle;
@@ -12,12 +14,22 @@ public class Attack : MonoBehaviour
     private GameObject crossbow;
     private GameObject bat;
 
+    private static bool reloadCheck = false;
+
+    private bool nowReloading = false;
     private int weapon;
     private Transform BulletLocation;
     private Transform GunRotation;
     public float BulletDelay;
     private Button AttackButton;
+    private static float reloadTime;
     private readonly Vector3 addAngle = new Vector3(0, 0, -90);
+
+    public static void SetReloadTime(float thatTime)
+    {
+        reloadTime = thatTime;
+        reloadCheck = true;
+    }
 
     private void Awake()
     {
@@ -33,6 +45,24 @@ public class Attack : MonoBehaviour
         //ShotgunBaseBullet.StartCoroutine();
         //CrosbowBaseBullet.Initalize(BulletLocation, GunRotation);
         //CrosbowBaseBullet.StartCoroutine();
+    }
+
+    private void Update()
+    {
+        if (reloadCheck)
+        {
+            reloadCheck = false;
+            nowReloading = true;
+            coolDown.fillAmount = 0;
+            Debug.Log("니미 씨발" + coolDown.fillAmount);
+        }
+        if (nowReloading)
+        {
+            if (coolDown.fillAmount < 1)
+                coolDown.fillAmount += 1f/reloadTime*Time.deltaTime;
+            else
+                nowReloading = false;
+        }
     }
 
     public int Selector()
