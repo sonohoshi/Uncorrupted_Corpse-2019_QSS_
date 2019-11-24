@@ -20,7 +20,6 @@ public class Attack : MonoBehaviour
     private int weapon;
     private Transform BulletLocation;
     private Transform GunRotation;
-    public float BulletDelay;
     private Button AttackButton;
     private static float reloadTime;
     private readonly Vector3 addAngle = new Vector3(0, 0, -90);
