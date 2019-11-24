@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\82108\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\82108\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_2019_QSS.1285532260.00" t="ExcludeRecursive" />
+    <e p="C:\Users\82108\WorkSpace\2019_QSS_\2019_QSS" t="IncludeRecursive">
+      <e p="2019_QSS.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Kim_sm" t="Include">
+          <e p="Bullet" t="Include">
+            <e p="BaseVoltPenetration.cs" t="Include" />
+            <e p="BulletPenetration.cs" t="Include" />
+            <e p="CrossbowBaseVolt.cs" t="Include" />
+            <e p="PistolBaseBullet.cs" t="Include" />
+            <e p="RifleBaseBullet.cs" t="Include" />
+            <e p="ShotgunBaseBullet.cs" t="Include" />
+            <e p="SilverVoltPenetration.cs" t="Include" />
+          </e>
+          <e p="Dummy" t="Include">
+            <e p="Enemy.cs" t="Include" />
+          </e>
+          <e p="Manager" t="Include">
+            <e p="BulletManager.cs" t="Include" />
+            <e p="CoroutineManager.cs" t="Include" />
+            <e p="ObjectPoolManager.cs" t="Include" />
+          </e>
+          <e p="PlayerBehavior" t="Include">
+            <e p="Attack.cs" t="Include" />
+            <e p="FindZombie.cs" t="Include" />
+            <e p="WeaponRotateAndFlip.cs" t="Include" />
+          </e>
+          <e p="SceneManage" t="Include">
+            <e p="SceneChanger.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="HPSlider.cs" t="Include" />
+              <e p="Joystick.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+              <e p="ReloadEffect.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Objects" t="Include">
+          <e p="Kim_sm" t="Include">
+            <e p="ZombieDamaged.cs" t="Include" />
+          </e>
+          <e p="niji_K" t="Include">
+            <e p="BloodPool.cs" t="Include" />
+            <e p="BloodZombie.cs" t="Include" />
+            <e p="Bread.cs" t="Include" />
+            <e p="CameraMovement.cs" t="Include" />
+            <e p="TestZombie.cs" t="Include" />
+            <e p="ZombieSpawner.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Park_dj" t="Include">
+          <e p="Objects" t="Include">
+            <e p="Entities" t="Include">
+              <e p="Entity.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+              <e p="Zombies" t="Include">
+                <e p="Zombie.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Items" t="Include">
+              <e p="Armor" t="Include">
+                <e p="Armor.cs" t="Include" />
+                <e p="Clothes.cs" t="Include" />
+                <e p="SilverArmor.cs" t="Include" />
+              </e>
+              <e p="BasicWeaponList" t="Include">
+                <e p="AssaultRifle.cs" t="Include" />
+                <e p="Bat.cs" t="Include" />
+                <e p="Crossbow.cs" t="Include" />
+                <e p="Handgun.cs" t="Include" />
+                <e p="Shotgun.cs" t="Include" />
+              </e>
+              <e p="GetItem.cs" t="Include" />
+              <e p="Inventory" t="Include">
+                <e p="Inventory.cs" t="Include" />
+                <e p="InventorySlot.cs" t="Include" />
+                <e p="PressButton.cs" t="Include" />
+                <e p="UpperButton.cs" t="Include" />
+                <e p="WearItemButton.cs" t="Include" />
+                <e p="WearItems.cs" t="Include" />
+              </e>
+              <e p="Items.cs" t="Include" />
+              <e p="MaterialItemList" t="Include">
+                <e p="Branch.cs" t="Include" />
+                <e p="EmptyCartridge.cs" t="Include" />
+                <e p="Fabric.cs" t="Include" />
+                <e p="Glass.cs" t="Include" />
+                <e p="Glue.cs" t="Include" />
+                <e p="Gunpowder.cs" t="Include" />
+                <e p="LaserPointer.cs" t="Include" />
+                <e p="Lighter.cs" t="Include" />
+                <e p="Nail.cs" t="Include" />
+                <e p="RadioactivityX.cs" t="Include" />
+                <e p="ScrapMetal.cs" t="Include" />
+                <e p="Silver.cs" t="Include" />
+                <e p="Spring.cs" t="Include" />
+                <e p="Thread.cs" t="Include" />
+                <e p="Wire.cs" t="Include" />
+              </e>
+              <e p="UpgradeItem" t="Include">
+                <e p="ConsumptionBullet" t="Include">
+                  <e p="Bolt.cs" t="Include" />
+                  <e p="Bullet.cs" t="Include" />
+                  <e p="SilverBolt.cs" t="Include" />
+                  <e p="SilverBullet.cs" t="Include" />
+                </e>
+                <e p="DotSite.cs" t="Include" />
+                <e p="OnetimeWeaponItemList" t="Include">
+                  <e p="AttackCancle.cs" t="Include" />
+                  <e p="FlameBottle.cs" t="Include" />
+                  <e p="FragmentMine.cs" t="Include" />
+                  <e p="Grenade.cs" t="Include" />
+                  <e p="ThrowItemControler.cs" t="Include" />
+                  <e p="ThrowItemFactory.cs" t="Include" />
+                  <e p="ThrowItemJoystick.cs" t="Include" />
+                </e>
+                <e p="Weapon" t="Include">
+                  <e p="CollapseCrossbow.cs" t="Include" />
+                  <e p="CollapseShotGun.cs" t="Include" />
+                  <e p="LaserAssaultRifle.cs" t="Include" />
+                  <e p="LaserHandGun.cs" t="Include" />
+                  <e p="Lightsaber.cs" t="Include" />
+                  <e p="ReinforcedBat.cs" t="Include" />
+                  <e p="ReinforcedCrossbow.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Structures" t="Include">
+              <e p="CraftingTable" t="Include">
+                <e p="CraftingTable.cs" t="Include" />
+                <e p="CraftingTableButton.cs" t="Include" />
+                <e p="CraftingTableSlot.cs" t="Include" />
+                <e p="CraftingTableTabButton.cs" t="Include" />
+                <e p="ErrorMessageExitButton.cs" t="Include" />
+                <e p="MakeItemButton.cs" t="Include" />
+                <e p="RecipeButton" t="Include">
+                  <e p="ExitRecipeUIButton.cs" t="Include" />
+                  <e p="Recipe.cs" t="Include" />
+                  <e p="ShowRecipeButton.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Food_Depot" t="Include">
+                <e p="Food_Depot.cs" t="Include" />
+                <e p="Food_Depot_ExitButton.cs" t="Include" />
+                <e p="Food_Depot_Keyboard.cs" t="Include" />
+                <e p="NowFood_Health.cs" t="Include" />
+                <e p="TakeFood.cs" t="Include" />
+              </e>
+              <e p="Structures.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

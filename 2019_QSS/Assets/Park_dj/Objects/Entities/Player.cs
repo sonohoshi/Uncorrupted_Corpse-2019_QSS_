@@ -20,7 +20,12 @@ public class Player : Entity
         DistWeight = dist;
         GetComponent<Rigidbody2D>().mass = DP;
     }
-    
+
+    private void Update()
+    {
+        if (transform.parent.position != transform.position) {transform.position = transform.parent.position; Debug.Log(transform.parent.position);}
+    }
+
     public float GetPriorityPoints(float distance)
     {
         return BasePoint - (distance * DistWeight);

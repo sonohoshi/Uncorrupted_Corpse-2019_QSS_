@@ -54,7 +54,6 @@ public class Attack : MonoBehaviour
             reloadCheck = false;
             nowReloading = true;
             coolDown.fillAmount = 0;
-            Debug.Log("니미 씨발" + coolDown.fillAmount);
         }
         if (nowReloading)
         {

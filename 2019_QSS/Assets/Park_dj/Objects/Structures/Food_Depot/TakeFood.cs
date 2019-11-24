@@ -19,12 +19,10 @@ public class TakeFood : MonoBehaviour
             {
                 NowFood_Health.problem = 1;
             }
-            /*else if (plr.GetStats()[0] + _TakeFood * 3 > 500)
-                InputField.text = "\0";
-            else if (plr.GetStats()[0] + int.Parse(InputField.text) * 3 > 500)
+            else if (plr.GetStats()[0] + _TakeFood * 3 > 500)
             {
                 NowFood_Health.problem = 2;
-            }*/
+            }
             else
             {
                 NowFood_Health.problem = 0;
