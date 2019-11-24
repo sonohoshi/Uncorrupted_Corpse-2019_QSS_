@@ -35,7 +35,6 @@ public class FindZombie : MonoBehaviour
         {
             Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
             return closestEnemy.transform;
-
         }
         return null;
     }

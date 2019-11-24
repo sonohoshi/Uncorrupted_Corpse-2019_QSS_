@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponRotateAndFlip : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public FindZombie findZombie;
     public PlayerController PC;
     private Transform Parent;
@@ -28,20 +28,20 @@ public class WeaponRotateAndFlip : MonoBehaviour
         if (target != null)
         {
             Vector3 dir = target.position - Parent.position; // 부모 오브젝트 받아와서 좀비랑 포지션 계산함
-            Vector3 UsingFlip = Parent.position - target.position;
+            Vector3 usingFlip = Parent.position - target.position;
 
-            if (UsingFlip.x < 0 && facingRight || UsingFlip.x > 0 && !facingRight)
+            if (usingFlip.x < 0 && facingRight || usingFlip.x > 0 && !facingRight)
             {
                 facingRight = !facingRight;
 
-                Vector3 theChaeracterScale = Parent.localScale;
-                Vector3 theWeaponScalse = transform.localScale;
-                theChaeracterScale.x *= -1;
-                theWeaponScalse.x *= -1;
-                theWeaponScalse.y *= -1;
+                Vector3 theCharacterScale = Parent.localScale;
+                Vector3 theWeaponScale = transform.localScale;
+                theCharacterScale.x *= -1;
+                theWeaponScale.x *= -1;
+                theWeaponScale.y *= -1;
 
-                transform.localScale = theWeaponScalse;
-                Parent.localScale = theChaeracterScale;
+                transform.localScale = theWeaponScale;
+                Parent.localScale = theCharacterScale;
             }
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -49,7 +49,22 @@ public class WeaponRotateAndFlip : MonoBehaviour
 
         }else
         {
-            transform.rotation = Quaternion.AngleAxis(1, PC.PoolInput());
+            Vector3 nulDir = PC.PoolInput();
+            if (nulDir.x > 0 && facingRight || nulDir.x < 0 && !facingRight)
+            {
+                facingRight = !facingRight;
+
+                Vector3 theCharacterScale = Parent.localScale;
+                Vector3 theWeaponScale = transform.localScale;
+                theCharacterScale.x *= -1;
+                theWeaponScale.x *= -1;
+                theWeaponScale.y *= -1;
+
+                transform.localScale = theWeaponScale;
+                Parent.localScale = theCharacterScale;
+            }
+            float angle = Mathf.Atan2(nulDir.y, nulDir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 }
