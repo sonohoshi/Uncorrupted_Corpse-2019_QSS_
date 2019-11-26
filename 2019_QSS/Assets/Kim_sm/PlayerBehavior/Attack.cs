@@ -57,7 +57,7 @@ public class Attack : MonoBehaviour
         if (nowReloading)
         {
             if (coolDown.fillAmount < 1)
-                coolDown.fillAmount += 1f/reloadTime*Time.deltaTime;
+                coolDown.fillAmount += reloadTime/1f*Time.deltaTime;
             else
                 nowReloading = false;
         }

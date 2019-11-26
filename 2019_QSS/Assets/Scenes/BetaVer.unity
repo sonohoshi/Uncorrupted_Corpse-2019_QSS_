@@ -2023,7 +2023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b452cc9ed1c80479a4f6cccd21f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   findZombie: {fileID: 1114974195}
   PC: {fileID: 1114974196}
 --- !u!1 &166351155
@@ -7885,7 +7884,7 @@ RectTransform:
   m_GameObject: {fileID: 697892811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 0.5, z: 1}
+  m_LocalScale: {x: 2.99, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1528700469}
   m_Father: {fileID: 1452412941}
@@ -21744,7 +21743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b452cc9ed1c80479a4f6cccd21f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   findZombie: {fileID: 1114974195}
   PC: {fileID: 1114974196}
 --- !u!1 &1709457059
@@ -25114,7 +25112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b452cc9ed1c80479a4f6cccd21f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   findZombie: {fileID: 1114974195}
   PC: {fileID: 1114974196}
 --- !u!1 &1886167299
