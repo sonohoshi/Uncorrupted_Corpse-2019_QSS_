@@ -18,9 +18,9 @@ public class ThrowItemFactory : MonoBehaviour
             _delayTime = 0.0f;
             GameObject _ThrowItem = Instantiate(ThrowItem, ThrowingSpace.transform.position, ThrowingSpace.transform.rotation);
             ThrowItemJoystick._onclick = false;
-            Destroy(_ThrowItem, 1.6f);
+            Destroy(_ThrowItem, 1.51f);
         }
-        if (_delayTime >= 1.6)
+        if (_delayTime >= 1.51)
         {
             delayTime = true;           
         }

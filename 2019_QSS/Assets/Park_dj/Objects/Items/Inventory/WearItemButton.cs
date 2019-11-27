@@ -22,21 +22,54 @@ public class WearItemButton : MonoBehaviour
             if (Inventory.TabType == 2)
             {
                 if (_ItemNumber == 1 || _ItemNumber == 2 || _ItemNumber == 3)
-                    WearItems.WearCloseRangeWeapon = _ItemNumber;
+                {
+                    if (WearItems.WearCloseRangeWeapon == _ItemNumber)
+                        ErrorMessage.text = "이미 장착중인 아이템입니다.";
+                    else
+                    {
+                        ErrorMessage.text = "아이템이 장착되었습니다.";
+                        ItemCnt.text = "";
+                        ItemName.text = "";
+                        WearItems.WearCloseRangeWeapon = _ItemNumber;
+                    }
+                }
                 else
-                    WearItems.WearRangedWeapon = _ItemNumber;
+                {
+                    if (WearItems.WearRangedWeapon == _ItemNumber)
+                        ErrorMessage.text = "이미 장착중인 아이템입니다.";
+                    else
+                    {
+                        ErrorMessage.text = "아이템이 장착되었습니다.";
+                        ItemCnt.text = "";
+                        ItemName.text = "";
+                        WearItems.WearRangedWeapon = _ItemNumber;
+                    }
+                }
             }
             else if (Inventory.TabType == 3)
             {
-                WearItems.WearOneTimeWeapon = _ItemNumber;
+                if (WearItems.WearOneTimeWeapon == _ItemNumber)
+                    ErrorMessage.text = "이미 장착중인 아이템입니다.";
+                else
+                {
+                    ErrorMessage.text = "아이템이 장착되었습니다.";
+                    ItemCnt.text = "";
+                    ItemName.text = "";
+                    WearItems.WearOneTimeWeapon = _ItemNumber;
+                }
             }
             else if (Inventory.TabType == 4)
             {
-                WearItems.WearArmor = _ItemNumber;
+                if (WearItems.WearArmor == _ItemNumber)
+                    ErrorMessage.text = "이미 장착중인 아이템입니다.";
+                else
+                {
+                    ErrorMessage.text = "아이템이 장착되었습니다.";
+                    ItemCnt.text = "";
+                    ItemName.text = "";
+                    WearItems.WearArmor = _ItemNumber;
+                }
             }
-            ErrorMessage.text = "아이템이 장착되었습니다.";
-            ItemCnt.text = "";
-            ItemName.text = "";
         }       
     }
 }

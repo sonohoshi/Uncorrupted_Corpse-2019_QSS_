@@ -9,8 +9,8 @@ public class AttackCancle : MonoBehaviour
     private Vector2 ButtonPosition;
     private Vector2 mouseInput;
 
-    public static bool justOne = false;
-
+    public static bool Cancel;
+    public static bool Delayused = false;
     private void Start()
     {
         ButtonPosition.x = CancleButton.transform.position.x - 692.8f;
@@ -22,14 +22,25 @@ public class AttackCancle : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             mouseInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            justOne = true;
         }
         if ((mouseInput.x >= ButtonPosition.x - 1) && (mouseInput.x <= ButtonPosition.x + 1) &&
-            (mouseInput.y >= ButtonPosition.y - 1) && (mouseInput.y <= ButtonPosition.y + 1) && justOne)
+            (mouseInput.y >= ButtonPosition.y - 1) && (mouseInput.y <= ButtonPosition.y + 1))
         {
             ThrowItemJoystick.inputVector = Vector3.zero;
             ThrowItemJoystick.JoystickImg.rectTransform.anchoredPosition = Vector3.zero;
-            justOne = false;
+            Cancel = true;
         }
+        else if(Delayused == false)
+        {
+            StartCoroutine("AttackDelay");            
+        }
+    }
+
+    IEnumerable AttackDelay()
+    {
+        Delayused = true;
+        Cancel = false;
+        yield return new WaitForSeconds(1.0f);
+        Cancel = true;
     }
 }
