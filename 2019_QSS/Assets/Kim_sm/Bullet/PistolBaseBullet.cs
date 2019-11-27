@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public static class PistolBaseBullet
@@ -23,7 +24,7 @@ public static class PistolBaseBullet
         {
             while (bullets.Count > 0)
             {
-                // Debug.Log("MoveBullet looping");
+                //Debug.Log("MoveBullet looping");
                 for (int i = 0; i < bullets.Count; i++)
                 {
                     if (bullets[i].LiveTime <= 0 || !bullets[i].Bullet.gameObject.activeSelf)

@@ -53,6 +53,7 @@ public static class CrosbowBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
+            Attack.SetReloadTime(0.5f);
             yield return new WaitForSeconds(0.5f);
             reloadSwitch = false;
             dirBullet = 1;

@@ -7,21 +7,20 @@ public class Attack : MonoBehaviour
 {
     public Image coolDown;
 
-    private GameObject player;
-    private GameObject pistol;
-    private GameObject rifle;
-    private GameObject shotgun;
-    private GameObject crossbow;
-    private GameObject bat;
+    public GameObject Player;
+    private GameObject _pistol;
+    private GameObject _rifle;
+    private GameObject _shotgun;
+    private GameObject _crossbow;
+    private GameObject _bat;
 
-    private static bool reloadCheck = false;
-
-    private bool nowReloading = false;
-    private int weapon;
-    private Transform BulletLocation;
-    private Transform GunRotation;
-    private Button AttackButton;
+    private bool _nowReloading = false;
+    private int _weapon;
+    private Transform _bulletLocation;
+    private Transform _gunRotation;
+    private Button _attackButton;
     private static float reloadTime;
+    private static bool reloadCheck = false;
     private readonly Vector3 addAngle = new Vector3(0, 0, -90);
 
     public static void SetReloadTime(float thatTime)
@@ -32,14 +31,13 @@ public class Attack : MonoBehaviour
 
     private void Awake()
     {
-        AttackButton = this.transform.GetComponent<Button>();
-        AttackButton.onClick.AddListener(UserAttack);
-        player = GameObject.Find("Player");
-        pistol = player.transform.GetChild(0).gameObject;
-        rifle = player.transform.GetChild(3).gameObject;
-        shotgun = player.transform.GetChild(4).gameObject;
-        crossbow = player.transform.GetChild(2).gameObject;
-        weapon = Selector();
+        _attackButton = this.transform.GetComponent<Button>();
+        _attackButton.onClick.AddListener(UserAttack);
+        _pistol = Player.transform.GetChild(0).gameObject;
+        _crossbow = Player.transform.GetChild(2).gameObject;
+        _rifle = Player.transform.GetChild(3).gameObject;
+        _shotgun = Player.transform.GetChild(4).gameObject;
+        Selector();
         //ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
         //ShotgunBaseBullet.StartCoroutine();
         //CrosbowBaseBullet.Initalize(BulletLocation, GunRotation);
@@ -51,50 +49,59 @@ public class Attack : MonoBehaviour
         if (reloadCheck)
         {
             reloadCheck = false;
-            nowReloading = true;
+            _nowReloading = true;
             coolDown.fillAmount = 0;
         }
-        if (nowReloading)
+        if (_nowReloading)
         {
             if (coolDown.fillAmount < 1)
                 coolDown.fillAmount += reloadTime/1f*Time.deltaTime;
             else
-                nowReloading = false;
+                _nowReloading = false;
         }
     }
 
-    public int Selector()
+    public void Selector()
     {
-        if (pistol.activeSelf)
+        if (_pistol.activeSelf)
         {
-            PistolBaseBullet.Initalize(pistol.transform.GetChild(0), pistol.transform);
+            PistolBaseBullet.Initalize(_pistol.transform.GetChild(0), _pistol.transform);
             PistolBaseBullet.StartCoroutine();
-            return 1;
+            _weapon = 1;
+            Handgun.cnt++;
+            return;
         }
-        if (rifle.activeSelf)
+        if (_rifle.activeSelf)
         {
-            RifleBaseBullet.Initalize(rifle.transform.GetChild(0), rifle.transform);
+            RifleBaseBullet.Initalize(_rifle.transform.GetChild(0), _rifle.transform);
             RifleBaseBullet.StartCoroutine();
-            return 2;
+            _weapon = 2;
+            AssaultRifle.cnt++;
+            return;
         }
-        if (shotgun.activeSelf)
+        if (_shotgun.activeSelf)
         {
-            ShotgunBaseBullet.Initalize(shotgun.transform.GetChild(0), shotgun.transform);
+            ShotgunBaseBullet.Initalize(_shotgun.transform.GetChild(0), _shotgun.transform);
             ShotgunBaseBullet.StartCoroutine();
-            return 3;
+            _weapon = 3;
+            Shotgun.cnt++;
+            return;
         }
-        if (crossbow.activeSelf)
+        if (_crossbow.activeSelf)
         {
-            CrosbowBaseBullet.Initalize(crossbow.transform.GetChild(0), crossbow.transform);
+            CrosbowBaseBullet.Initalize(_crossbow.transform.GetChild(0), _crossbow.transform);
             CrosbowBaseBullet.StartCoroutine();
-            return 4;
+            _weapon = 4;
+            Crossbow.cnt++;
+            return;
         }
-        return 0;
+        _weapon = 0;
     }
     
     public void UserAttack()
     {
-        switch (weapon)
+        Debug.Log(_weapon);
+        switch (_weapon)
         {
             case 1:PistolBaseBullet.StartPistolDelayCoroutine(); break;
             case 2:RifleBaseBullet.StartRifleDelayCoroutine(); break;

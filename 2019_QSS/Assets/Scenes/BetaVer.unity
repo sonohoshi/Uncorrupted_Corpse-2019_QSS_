@@ -9117,7 +9117,7 @@ RectTransform:
   m_GameObject: {fileID: 813054539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.20799999, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 206841728}
   m_RootOrder: 1
@@ -13349,7 +13349,7 @@ RectTransform:
   m_GameObject: {fileID: 1106973824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.21, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 206841728}
   m_RootOrder: 0
@@ -18232,6 +18232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coolDown: {fileID: 1443525465}
+  Player: {fileID: 1114974191}
 --- !u!58 &1443525468
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21367,7 +21368,7 @@ RectTransform:
   m_GameObject: {fileID: 1675418040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.312, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 206841728}
   m_RootOrder: 2
