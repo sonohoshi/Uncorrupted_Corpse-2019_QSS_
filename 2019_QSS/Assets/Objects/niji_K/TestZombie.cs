@@ -28,7 +28,7 @@ public class TestZombie : Zombie
         attack_delay += Time.deltaTime;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (attack_delay >= 0.5)
         {

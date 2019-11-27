@@ -6,7 +6,7 @@ public class Player : Entity
 {
     private float BasePoint;
     private float DistWeight;
-    void Start() 
+    void Start()
     {
         Begin(100, 5, 5, 10, 30, 1);
     }
