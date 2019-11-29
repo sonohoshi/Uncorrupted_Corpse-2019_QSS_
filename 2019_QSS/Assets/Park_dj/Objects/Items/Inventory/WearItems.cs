@@ -12,8 +12,7 @@ public class WearItems : MonoBehaviour
     //무기번호 : 1번 수류탄, 2번 파편 지뢰, 3번 화염병
     public static int WearArmor = 0;
     //무기번호 : 1번 옷, 2번 갑옷, 3번 은 갑옷
-
-
+    
     public static int[] WearItem()
     {
         int[] EquippedItems = { WearCloseRangeWeapon, WearRangedWeapon,  WearOneTimeWeapon, WearArmor};
