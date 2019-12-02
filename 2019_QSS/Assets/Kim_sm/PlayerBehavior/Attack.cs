@@ -37,11 +37,7 @@ public class Attack : MonoBehaviour
         _crossbow = Player.transform.GetChild(2).gameObject;
         _rifle = Player.transform.GetChild(3).gameObject;
         _shotgun = Player.transform.GetChild(4).gameObject;
-        Selector();
-        //ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
-        //ShotgunBaseBullet.StartCoroutine();
-        //CrosbowBaseBullet.Initalize(BulletLocation, GunRotation);
-        //CrosbowBaseBullet.StartCoroutine();
+        Selector(); // 무기의 활성화 상태에 따라서 어떤 무기를 사용할 지 고르는 메소드임.
     }
 
     private void Update()
@@ -61,7 +57,7 @@ public class Attack : MonoBehaviour
         }
     }
 
-    public void Selector()
+    public void Selector() //해당 함수는 무기가 바뀔때마다 실행될 수 있도록 만들어야 함.
     {
         if (_pistol.activeSelf)
         {
