@@ -50,7 +50,7 @@ public class WeaponRotateAndFlip : MonoBehaviour
         }else
         {
             Vector3 nulDir = PC.PoolInput();
-            if (nulDir.x > 0 && facingRight || nulDir.x < 0 && !facingRight)
+            if (nulDir.x < 0 && !facingRight || nulDir.x >= 0 && facingRight)
             {
                 facingRight = !facingRight;
 
