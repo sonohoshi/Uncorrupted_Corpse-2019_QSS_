@@ -40,7 +40,6 @@ public class CraftingTable : MonoBehaviour
         C_T_Interection.SetActive(false);
     }
 
-
     private void Update()
     {        
         if(OnOffTable == true)

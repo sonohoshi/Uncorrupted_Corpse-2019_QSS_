@@ -8,7 +8,7 @@ public class GetItem : MonoBehaviour
     public Text GetItemText;
 
     //재료 획득 시 재료획득 갯수
-    public static int GainMaterialItem = 2;
+    public static int GainMaterialItem = 4;
     public static int GainRadioactivityX = 0;
 
     //업그레이드 된 아이템을 만들 때

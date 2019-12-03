@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     //나중에 효과음 넣기
-
-
     public static int TabType = 1;
 
     public GameObject WearItemButtonUI;

@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 8205033621505036832}
   - component: {fileID: 8205033621505036845}
   - component: {fileID: 8205033621505036844}
-  - component: {fileID: 8205033621505036835}
   - component: {fileID: -8169279244061256508}
   m_Layer: 0
   m_Name: Player1
@@ -256,27 +255,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &8205033621505036835
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205033621505036839}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!114 &-8169279244061256508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,11 +306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8205033621136296421}
     m_Modifications:
-    - target: {fileID: 4935718323509407642, guid: 354f8c6ea3ed5954b812b784ec2ee9fb,
-        type: 3}
-      propertyPath: m_Name
-      value: BulletLocation
-      objectReference: {fileID: 0}
     - target: {fileID: 4935718323509407643, guid: 354f8c6ea3ed5954b812b784ec2ee9fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,6 +360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935718323509407642, guid: 354f8c6ea3ed5954b812b784ec2ee9fb,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletLocation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 354f8c6ea3ed5954b812b784ec2ee9fb, type: 3}

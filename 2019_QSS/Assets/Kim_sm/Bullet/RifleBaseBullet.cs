@@ -5,10 +5,10 @@ using UnityEngine;
 public static class RifleBaseBullet
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
-    public readonly static BulletManager.BulletType type = BulletManager.BulletType.Base;
+    private static readonly BulletManager.BulletType type = BulletManager.BulletType.Base;
     private static readonly float LiveTime = 1.5f; // 대충 15미터라고 잡아보자.
-    public static Transform BulletLocation;
-    public static Transform GunRotation;
+    private static Transform BulletLocation;
+    private static Transform GunRotation;
     private static Vector3 moveVector = new Vector3(0, 50, 0);
     private static int dirBullet = 20;
 
@@ -26,9 +26,13 @@ public static class RifleBaseBullet
                 // Debug.Log("MoveBullet looping");
                 for (int i = 0; i < bullets.Count; i++)
                 {
-                    if (bullets[i].LiveTime <= 0)
+                    if (bullets[i].LiveTime <= 0 || !bullets[i].Bullet.gameObject.activeSelf)
                     {
-                        bullets[i].Bullet.gameObject.SetActive(false);
+                        if (bullets[i].Bullet.gameObject.activeSelf)
+                        {
+                            bullets[i].Bullet.gameObject.SetActive(false);
+                        }
+
                         ObjectPoolManager.objectQueues[type].Enqueue(bullets[i]);
                         bullets.RemoveAt(i);
                         i--;
@@ -50,6 +54,7 @@ public static class RifleBaseBullet
         {
             Debug.Log("Reloading");
             reloadSwitch = true;
+            Attack.SetReloadTime(2f);
             yield return new WaitForSeconds(2f);
             reloadSwitch = false;
             dirBullet = 20;

@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class FindZombie : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,7 +25,11 @@ public class FindZombie : MonoBehaviour
                 closestEnemy = currentEnemy;
             }
         }
-        Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
-        return closestEnemy.transform;
+        if(closestEnemy != null)
+        {
+            Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
+            return closestEnemy.transform;
+        }
+        return null;
     }
 }

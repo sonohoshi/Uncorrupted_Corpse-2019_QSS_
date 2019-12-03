@@ -11,14 +11,14 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveVector;
     private Transform _transform;
 
-    void Start()
+    private void Start()
     {
         _transform = transform;
         _moveVector = Vector3.zero;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         HandleInput();
     }
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMove();
-        /*playerMoveAnimator.SetBool("IsMove", DistinctionMoving());*/
+        playerMoveAnimator.SetBool("IsMove", DistinctionMoving());
     }
 
     public void HandleInput()
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     public void PlayerMove()
     {
         _transform.Translate(_moveVector * moveSpeed * Time.deltaTime);
+        
     }
     public bool DistinctionMoving()
     {
