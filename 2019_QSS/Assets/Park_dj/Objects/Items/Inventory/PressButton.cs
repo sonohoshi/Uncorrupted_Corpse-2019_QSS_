@@ -32,6 +32,6 @@ public class PressButton : MonoBehaviour
             itemCnt_Text.text = "";
             Item_Description.text = "무기, 갑옷, 탄약, 구조물을 만들 때 사용하는 재료입니다.";
         }
-        InventoryUI.SetActive(!InventoryUI.active);
+        InventoryUI.SetActive(!InventoryUI.activeSelf);
     }
 }
