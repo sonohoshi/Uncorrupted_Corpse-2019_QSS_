@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b452cc9ed1c80479a4f6cccd21f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   findZombie: {fileID: 8205033621505036845}
+  PC: {fileID: 0}
 --- !u!1 &8205033621505036839
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8205033621505036833}
   - component: {fileID: 8205033621505036838}
-  - component: {fileID: 8205033621505036834}
   - component: {fileID: 8205033621505036832}
   - component: {fileID: 8205033621505036845}
   - component: {fileID: 8205033621505036844}
@@ -183,32 +182,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8205033621505036834
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205033621505036839}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.41699302, y: 0.28124046}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.9, y: 0.35}
-    oldSize: {x: 1.08, y: 1.84}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0957134, y: 1.8524656}
-  m_EdgeRadius: 0
 --- !u!114 &8205033621505036832
 MonoBehaviour:
   m_ObjectHideFlags: 0
