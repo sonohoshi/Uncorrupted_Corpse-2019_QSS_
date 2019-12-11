@@ -29,6 +29,7 @@
             <e p="Attack.cs" t="Include" />
             <e p="FindZombie.cs" t="Include" />
             <e p="MeleeAttack.cs" t="Include" />
+            <e p="MeleeWeaponFlip.cs" t="Include" />
             <e p="WeaponRotateAndFlip.cs" t="Include" />
           </e>
           <e p="SceneManage" t="Include">
@@ -44,9 +45,6 @@
           </e>
         </e>
         <e p="Objects" t="Include">
-          <e p="Kim_sm" t="Include">
-            <e p="ZombieDamaged.cs" t="Include" />
-          </e>
           <e p="niji_K" t="Include">
             <e p="BloodPool.cs" t="Include" />
             <e p="BloodZombie.cs" t="Include" />

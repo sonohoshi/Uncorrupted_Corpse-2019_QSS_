@@ -37,6 +37,7 @@ public class Attack : MonoBehaviour
         _crossbow = Player.transform.GetChild(2).gameObject;
         _rifle = Player.transform.GetChild(3).gameObject;
         _shotgun = Player.transform.GetChild(4).gameObject;
+        _bat = Player.transform.GetChild(5).gameObject;
         Selector(); // 무기의 활성화 상태에 따라서 어떤 무기를 사용할 지 고르는 메소드임.
     }
 
@@ -90,6 +91,10 @@ public class Attack : MonoBehaviour
             _weapon = 4;
             Crossbow.cnt++;
             return;
+        }
+        if (_bat.activeSelf)
+        {
+            //input plz
         }
         _weapon = 0;
     }
