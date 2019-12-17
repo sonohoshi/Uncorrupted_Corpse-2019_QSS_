@@ -8,15 +8,15 @@ public class Structures : MonoBehaviour
     protected float HP;
     protected float BasePoint;
     protected float DistWeight;
-    public enum StrucutreType
+    public enum StrucutreType : int
     {
-        FoodDepot,
-        FoodGenerator,
-        WoodWall,
-        StoneWall,
-        SmallTurret,
-        MiddleTurret,
-        BigTurret
+        FoodDepot = 0,
+        FoodGenerator = 1,
+        WoodWall = 2,
+        StoneWall = 3,
+        SmallTurret = 4,
+        MiddleTurret = 5,
+        BigTurret = 6
     }
 
     protected void Begin(float hp, float dp, float bp, float dist)
@@ -38,7 +38,10 @@ public class Structures : MonoBehaviour
     }
 
     public void Attacked(float atk) {
-        HP -= atk - DP; Debug.Log(HP);
+        HP -= atk - DP; 
+#if UNITY_EDITOR
+        Debug.Log(HP);
+#endif
         if (HP <= 0) { Destroy(gameObject); }
     }
 }

@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 9119838350900922767}
   - component: {fileID: 9119838350900922801}
   - component: {fileID: 9119838350900922800}
-  - component: {fileID: 9119838350900922766}
   - component: {fileID: 9119838350900922803}
-  m_Layer: 0
+  - component: {fileID: 44406037}
+  - component: {fileID: 44406038}
+  m_Layer: 10
   m_Name: FoodDepot
-  m_TagString: Untagged
+  m_TagString: FoodDepot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9119838350900922764}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.11, y: -0.19, z: -1.9238281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -96,22 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   F_D_Interection: {fileID: 0}
---- !u!58 &9119838350900922766
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119838350900922764}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.068995476, y: -0.13855171}
-  serializedVersion: 2
-  m_Radius: 2.4529204
 --- !u!50 &9119838350900922803
 Rigidbody2D:
   serializedVersion: 4
@@ -133,3 +118,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &44406037
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119838350900922764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1955738, y: 0.0992558}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.8, y: 10.24}
+    newSize: {x: 6.8, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.7725763, y: 3.632491}
+  m_EdgeRadius: 0
+--- !u!114 &44406038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119838350900922764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50854ed888493c7488cc39ffb5724237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_count: 0
+  zombie:
+  - {fileID: 3878430080576505607, guid: be9bf86e505a10a43a0a24210e2b5e88, type: 3}

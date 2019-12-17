@@ -9,6 +9,7 @@ public class WeaponRotateAndFlip : MonoBehaviour
     public PlayerController PC;
     private Transform Parent;
     private bool facingRight;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,7 @@ public class WeaponRotateAndFlip : MonoBehaviour
         }else
         {
             Vector3 nulDir = PC.PoolInput();
-            if (nulDir.x > 0 && facingRight || nulDir.x < 0 && !facingRight)
+            if (nulDir.x < 0 && !facingRight || nulDir.x >= 0 && facingRight)
             {
                 facingRight = !facingRight;
 

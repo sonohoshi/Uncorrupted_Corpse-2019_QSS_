@@ -37,11 +37,8 @@ public class Attack : MonoBehaviour
         _crossbow = Player.transform.GetChild(2).gameObject;
         _rifle = Player.transform.GetChild(3).gameObject;
         _shotgun = Player.transform.GetChild(4).gameObject;
-        Selector();
-        //ShotgunBaseBullet.Initalize(BulletLocation, GunRotation);
-        //ShotgunBaseBullet.StartCoroutine();
-        //CrosbowBaseBullet.Initalize(BulletLocation, GunRotation);
-        //CrosbowBaseBullet.StartCoroutine();
+        _bat = Player.transform.GetChild(5).gameObject;
+        Selector(); // 무기의 활성화 상태에 따라서 어떤 무기를 사용할 지 고르는 메소드임.
     }
 
     private void Update()
@@ -55,13 +52,13 @@ public class Attack : MonoBehaviour
         if (_nowReloading)
         {
             if (coolDown.fillAmount < 1)
-                coolDown.fillAmount += reloadTime/1f*Time.deltaTime;
+                coolDown.fillAmount += 1f/reloadTime*Time.deltaTime;
             else
                 _nowReloading = false;
         }
     }
 
-    public void Selector()
+    public void Selector() //해당 함수는 무기가 바뀔때마다 실행될 수 있도록 만들어야 함.
     {
         if (_pistol.activeSelf)
         {
@@ -95,18 +92,26 @@ public class Attack : MonoBehaviour
             Crossbow.cnt++;
             return;
         }
+        if (_bat.activeSelf)
+        {
+            _weapon = 5;
+            Bat.cnt = 1;
+        }
         _weapon = 0;
     }
     
     public void UserAttack()
     {
+       #if UNITY_EDITOR
         Debug.Log(_weapon);
+#endif
         switch (_weapon)
         {
             case 1:PistolBaseBullet.StartPistolDelayCoroutine(); break;
             case 2:RifleBaseBullet.StartRifleDelayCoroutine(); break;
             case 3:ShotgunBaseBullet.StartshotgunDelayCoroutine(); break;
             case 4:CrosbowBaseBullet.StartCrosbowDelayCoroutine(); break;
+            
         }
         //PistolBaseBullet.ShotPistolBullet();
         //ShotgunBaseBullet.StartshotgunDelayCoroutine();
