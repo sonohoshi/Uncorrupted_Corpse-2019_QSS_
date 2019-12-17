@@ -11,8 +11,9 @@ public class ZombieSpawner : MonoBehaviour
     private int[] wave_zombie_count = { 0, 5, 10, 25, 50, 10, 20, 40, 60, 70, 20 };
     private int[] wave_spawn_speed = { 0, 5, 5, 5, 5, 8, 5, 5, 5, 5, 8};
     private int[] wave_rest_time = { 0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
-    private int wave;
+    public static int wave;
     public static int zombie_count = 0;
+    public static bool rest = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,19 +28,20 @@ public class ZombieSpawner : MonoBehaviour
         if (zombie_count == 0) {
             if (FindObjectOfType<Zombie>() == null) {
                 time_count += Time.deltaTime;
-                Debug.Log("rest time");
+                rest = true;
             }
 
             if (time_count > wave_rest_time[wave])
             {
                 time_count = 0;
                 wave++; zombie_count = wave_zombie_count[wave];
+                rest = false;
             }
         }
         else
         {
             time_count += Time.deltaTime;
-
+            rest = false;
             if (time_count >= wave_spawn_speed[wave])
             {
                 float dist = Random.Range(16.0f, 20.0f);
