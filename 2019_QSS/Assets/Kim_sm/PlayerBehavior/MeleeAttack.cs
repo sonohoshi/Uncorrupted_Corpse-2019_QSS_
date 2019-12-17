@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class MeleeAttack : MonoBehaviour
 {
     private bool isMoving;
     private bool isTurn;
     private float coolDown;
+    private static Transform playerLocation;
+    
     public Transform attackEffect;
-
+    
     void Awake()
     {
         isTurn = false;
@@ -19,19 +23,27 @@ public class MeleeAttack : MonoBehaviour
     void Update()
     {
         coolDown += Time.deltaTime;
-        moveBat();
+        MoveBat();
     }
     
-    private void calledAttack()
+    private void CalledAttack()
     {
         if (coolDown > 2f)
         {
             isMoving = true;
             coolDown = 0f;
+            Attack.SetReloadTime(2f);
         }
     }
 
-    private void moveBat()
+    private void RealAttack()
+    {
+        attackEffect.gameObject.SetActive(true);
+        attackEffect.localPosition = playerLocation.position;
+        
+    }
+
+    private void MoveBat()
     {
         if (isMoving)
         {

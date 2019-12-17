@@ -7,6 +7,7 @@ public class CraftingTable : MonoBehaviour
 {
     public static int TabType = 1;
     public static bool OnOffTable = false;
+
     //분류 버튼
     public GameObject WeaponGridslot;
     public GameObject OneTimeWeaponGridslot;

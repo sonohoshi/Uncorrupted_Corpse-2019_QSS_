@@ -94,20 +94,24 @@ public class Attack : MonoBehaviour
         }
         if (_bat.activeSelf)
         {
-            //input plz
+            _weapon = 5;
+            Bat.cnt = 1;
         }
         _weapon = 0;
     }
     
     public void UserAttack()
     {
+       #if UNITY_EDITOR
         Debug.Log(_weapon);
+#endif
         switch (_weapon)
         {
             case 1:PistolBaseBullet.StartPistolDelayCoroutine(); break;
             case 2:RifleBaseBullet.StartRifleDelayCoroutine(); break;
             case 3:ShotgunBaseBullet.StartshotgunDelayCoroutine(); break;
             case 4:CrosbowBaseBullet.StartCrosbowDelayCoroutine(); break;
+            
         }
         //PistolBaseBullet.ShotPistolBullet();
         //ShotgunBaseBullet.StartshotgunDelayCoroutine();
