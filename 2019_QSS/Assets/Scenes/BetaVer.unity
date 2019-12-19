@@ -17776,6 +17776,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399394604}
   m_CullTransparentMesh: 0
+--- !u!114 &1399588453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1147438305, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8205033621628166453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7bf1540732afb448d7a77aa9c9df20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404911112
 GameObject:
   m_ObjectHideFlags: 0
@@ -18146,7 +18158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1441136660}
-  plr: {fileID: 0}
+  plr: {fileID: 1399588453}
 --- !u!1 &1443525462
 GameObject:
   m_ObjectHideFlags: 0
@@ -28500,6 +28512,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8205033621505036832, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1886167301}
     - target: {fileID: 8205033621505036833, guid: 9cc52219938b75d45a3425dcbaaf88f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28565,11 +28582,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8205033621505036832, guid: 9cc52219938b75d45a3425dcbaaf88f1,
-        type: 3}
-      propertyPath: joystick
-      value: 
-      objectReference: {fileID: 1886167301}
     - target: {fileID: 8205033621136296442, guid: 9cc52219938b75d45a3425dcbaaf88f1,
         type: 3}
       propertyPath: m_Name
