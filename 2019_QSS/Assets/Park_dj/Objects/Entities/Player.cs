@@ -23,7 +23,8 @@ public class Player : Entity
 
     private void Update()
     {
-        if (transform.parent.position != transform.position) {transform.position = transform.parent.position; Debug.Log(transform.parent.position);}
+        if (transform.parent.position != transform.position)
+            transform.position = transform.parent.position;
     }
 
     public float GetPriorityPoints(float distance)
@@ -48,7 +49,7 @@ public class Player : Entity
 
     public void Attacked(float atk)
     {
-        HP -= atk - DP; Debug.Log(HP);
+        HP -= atk - DP;
         if (HP <= 0) { Destroy(transform.parent.gameObject); }
     }
 }
