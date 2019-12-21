@@ -48,9 +48,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
+  - name: Road
     uniqueID: 2836293443
     locked: 0
-  - name: Character
+  - name: Water
     uniqueID: 713825381
+    locked: 0
+  - name: Wall
+    uniqueID: 822660885
+    locked: 0
+  - name: Character
+    uniqueID: 1684780045
+    locked: 0
+  - name: Structer
+    uniqueID: 3679857707
     locked: 0

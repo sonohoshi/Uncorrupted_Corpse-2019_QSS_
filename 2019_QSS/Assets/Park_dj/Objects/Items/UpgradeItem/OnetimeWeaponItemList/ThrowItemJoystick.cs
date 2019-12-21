@@ -54,6 +54,7 @@ public class ThrowItemJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler,
     {
         OnDrag(ped);
         CancleButton.SetActive(true);
+        AttackCancle.Delayused = false;
     }
 
     public float GetHorizontalValue()
@@ -67,7 +68,15 @@ public class ThrowItemJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler,
 
     public virtual void OnPointerUp(PointerEventData ped)
     {
-        onClick = true;
-        _onclick = true;
+        if (AttackCancle.Cancel)
+        {
+            onClick = false;
+            _onclick = false;
+        }
+        else
+        {
+            onClick = true;
+            _onclick = true;
+        }
     }
 }
