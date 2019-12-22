@@ -13554,6 +13554,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1114974193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2549180773153582900, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8205033621628166453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114974191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1114974194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8721011786786023776, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8205033621628166453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114974191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1114974196 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8205033621505036832, guid: 9cc52219938b75d45a3425dcbaaf88f1,
@@ -28497,6 +28521,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6799923663266744713, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_Text
+      value: "\uAE40\uC120\uBBFC \uB4F1\uC7A5!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799923663266744713, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 3deba98db48b84e469795b87e0abab3d,
+        type: 3}
+    - target: {fileID: 6799923663266744713, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799923663266744713, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121746209630847309, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121746209630847309, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: viewIdField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121746209630847309, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 1114974193}
+    - target: {fileID: 8121746209630847309, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1114974194}
+    - target: {fileID: -8721011786786023776, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_SynchronizeParameters.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8721011786786023776, guid: 9cc52219938b75d45a3425dcbaaf88f1,
+        type: 3}
+      propertyPath: m_SynchronizeLayers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ObservedComponents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8205033621505036839, guid: 9cc52219938b75d45a3425dcbaaf88f1,
         type: 3}
       propertyPath: m_Name
@@ -28605,6 +28688,14 @@ PrefabInstance:
     - target: {fileID: 8205033621505036834, guid: 9cc52219938b75d45a3425dcbaaf88f1,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721919116, guid: 9cc52219938b75d45a3425dcbaaf88f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869114946, guid: 9cc52219938b75d45a3425dcbaaf88f1, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,7 +8,8 @@ public class PlayerController : MonoBehaviour
     public Joystick joystick;
     public float moveSpeed;
     public Animator playerMoveAnimator;
-
+    public PhotonView PV;
+    
     private Vector3 _moveVector;
     private Transform _transform;
 
@@ -20,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        HandleInput();
+        if(PV.IsMine) HandleInput();
     }
 
     private void FixedUpdate()

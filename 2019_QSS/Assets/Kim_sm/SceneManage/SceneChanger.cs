@@ -6,10 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public GameObject selectUI;
+    public GameObject localUI;
+    public GameObject serverUI;
+    
     enum SceneType : int
     {
         BetaVer = 0
     }
+
+    public void UiChange()
+    {
+        localUI.SetActive(false);
+        serverUI.SetActive(false);
+        selectUI.SetActive(true);
+    }
+    
     public void GameStart()
     {
         SceneChange("BetaVer");
@@ -24,6 +36,4 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(name);
     }
-
-    
 }
