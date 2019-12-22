@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public static class ObjectPoolManager
 {
@@ -26,7 +28,9 @@ public static class ObjectPoolManager
         else
         {
             info = new BulletManager.BulletInfo();
-            info.Bullet = MonoBehaviour.Instantiate<Transform>(Resources.Load<Transform>(BulletManager.BulletTypeToPath(type)));
+            //info.Bullet = MonoBehaviour.Instantiate<Transform>(Resources.Load<Transform>(BulletManager.BulletTypeToPath(type)));
+            info.Bullet = PhotonNetwork.Instantiate(Resources.Load<GameObject>(BulletManager.BulletTypeToPath(type)).name, Vector3.forward,
+                Quaternion.identity).transform;
             info.ImageType = type;
         }
 

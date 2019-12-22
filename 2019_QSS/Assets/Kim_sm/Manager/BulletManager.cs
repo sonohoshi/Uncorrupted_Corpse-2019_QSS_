@@ -24,18 +24,4 @@ public static class BulletManager
 
         throw new System.NullReferenceException();
     }
-    
-    public static float GetBulletDamage(BulletType type) // 태그로 관리 //기욱쿤 부탁해!!!
-    {
-        switch (type)
-        {
-            case BulletType.Base: return 0;
-            case BulletType.Silver: return 0;
-            case BulletType.BaseVolt: return 0;
-            case BulletType.SilverVolt: return 0;
-        }
-
-        throw new System.NullReferenceException();
-    }
-
 }

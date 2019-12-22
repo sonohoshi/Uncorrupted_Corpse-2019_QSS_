@@ -1233,10 +1233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c1efd0e8891ae4ebc224d0812c8b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
+  joystick: {fileID: 7275783184418193884, guid: d9ce4d19c6f6f444190b4ee20ee8bb48,
+    type: 3}
   moveSpeed: 4.99
   playerMoveAnimator: {fileID: 8205033621505036844}
-  PV: {fileID: 0}
+  PV: {fileID: 8121746209630847309}
 --- !u!114 &8205033621505036845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,6 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nicknameTXT: {fileID: 1731835165246960442}
   PV: {fileID: 8121746209630847309}
+  ATK: {fileID: 5527099152087605781, guid: 8b5b067387f9e1245b63564bbfc485e0, type: 3}
 --- !u!1 &8205033621608321143
 GameObject:
   m_ObjectHideFlags: 0

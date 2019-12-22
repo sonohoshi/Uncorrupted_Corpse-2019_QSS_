@@ -12,9 +12,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public Button failedBTN;
     public SceneChanger SC;
 
+    private int weaponType;
+
     //void Update() => statusText.text = PhotonNetwork.NetworkClientState.ToString();
 
-    public void Connect() => PhotonNetwork.ConnectUsingSettings();
+    public void Connect(int n)
+    {
+        PhotonNetwork.ConnectUsingSettings();
+        weaponType = n;
+    }
 
     public override void OnConnectedToMaster()
     {
@@ -30,9 +36,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void JoinLobby() => PhotonNetwork.JoinLobby();
 
     public override void OnJoinedLobby() => Debug.Log("Lobby Login success");
-    
-    public void JoinOrCreateRoom() =>
+
+    public void JoinOrCreateRoom()
+    {
         PhotonNetwork.JoinOrCreateRoom("Room", new RoomOptions {MaxPlayers = 4}, null);
+    }
 
     public void JoinRandomRoom() => PhotonNetwork.JoinRandomRoom();
 
@@ -51,6 +59,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         SC.GameStart();
-        PhotonNetwork.Instantiate("Player1", Vector3.forward, Quaternion.identity);
+        GameObject player = PhotonNetwork.Instantiate("Player1", Vector3.forward, Quaternion.identity);
+        player.GetComponent<NetworkPlayer>().SetWeapon(weaponType);
     }
 }
