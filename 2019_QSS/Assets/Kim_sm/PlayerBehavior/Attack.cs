@@ -29,16 +29,11 @@ public class Attack : MonoBehaviour
         reloadCheck = true;
     }
 
-    private void Awake()
+    private void Start()
     {
         _attackButton = this.transform.GetComponent<Button>();
         _attackButton.onClick.AddListener(UserAttack);
-        _pistol = Player.transform.GetChild(0).gameObject;
-        _crossbow = Player.transform.GetChild(2).gameObject;
-        _rifle = Player.transform.GetChild(3).gameObject;
-        _shotgun = Player.transform.GetChild(4).gameObject;
-        _bat = Player.transform.GetChild(5).gameObject;
-        Selector(); // 무기의 활성화 상태에 따라서 어떤 무기를 사용할 지 고르는 메소드임.
+        
     }
 
     private void Update()
@@ -60,6 +55,11 @@ public class Attack : MonoBehaviour
 
     public void Selector() //해당 함수는 무기가 바뀔때마다 실행될 수 있도록 만들어야 함.
     {
+        _pistol = Player.transform.GetChild(0).gameObject;
+        _crossbow = Player.transform.GetChild(1).gameObject;
+        _rifle = Player.transform.GetChild(2).gameObject;
+        _shotgun = Player.transform.GetChild(3).gameObject;
+        _bat = Player.transform.GetChild(4).gameObject;
         if (_pistol.activeSelf)
         {
             PistolBaseBullet.Initalize(_pistol.transform.GetChild(0), _pistol.transform);
@@ -102,7 +102,7 @@ public class Attack : MonoBehaviour
     
     public void UserAttack()
     {
-       #if UNITY_EDITOR
+#if UNITY_EDITOR
         Debug.Log(_weapon);
 #endif
         switch (_weapon)
@@ -111,18 +111,6 @@ public class Attack : MonoBehaviour
             case 2:RifleBaseBullet.StartRifleDelayCoroutine(); break;
             case 3:ShotgunBaseBullet.StartshotgunDelayCoroutine(); break;
             case 4:CrosbowBaseBullet.StartCrosbowDelayCoroutine(); break;
-            
         }
-        //PistolBaseBullet.ShotPistolBullet();
-        //ShotgunBaseBullet.StartshotgunDelayCoroutine();
-        //CrosbowBaseBullet.StartCrosbowDelayCoroutine();
-        /*
-        BulletManager.BulletInfo bulletinfo = ObjectPoolManager.Dequeue(BulletManager.BulletType.Base);
-        bulletinfo.Bullet.position = BulletLocation.position;
-        bulletinfo.Bullet.eulerAngles = GunRotation.eulerAngles + addAngle;
-        
-        Transform b = Instantiate<Transform>(bullet.transform, BulletLocation.position, GunRotation.rotation);
-        b.eulerAngles += new Vector3(0, 0, -90);
-        */
     }
 }

@@ -22,6 +22,7 @@
           </e>
           <e p="Manager" t="Include">
             <e p="BulletManager.cs" t="Include" />
+            <e p="CameraManager.cs" t="Include" />
             <e p="CoroutineManager.cs" t="Include" />
             <e p="ObjectPoolManager.cs" t="Include" />
           </e>
@@ -41,6 +42,7 @@
               <e p="Joystick.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
               <e p="ReloadEffect.cs" t="Include" />
+              <e p="WeaponSelect.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -156,6 +158,7 @@
             </e>
           </e>
         </e>
+        <e p="WaveUI.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

@@ -14,7 +14,7 @@ public class SceneChanger : MonoBehaviour
     {
         SceneChange("BetaVer");
     }
-
+    
     public void GameQuit()
     {
         Application.Quit();
@@ -24,6 +24,5 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(name);
     }
-
     
 }

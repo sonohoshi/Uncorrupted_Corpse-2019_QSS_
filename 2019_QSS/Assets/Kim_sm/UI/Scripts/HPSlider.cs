@@ -7,7 +7,6 @@ public class HPSlider : MonoBehaviour
 {
     public Image slider;
     public Player plr;
-    // Update is called once per frame
     void Update()
     {
         slider.fillAmount = plr.GetStats()[0] * 0.002f;
