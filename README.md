@@ -1,3 +1,12 @@
+# Game Title : Uncorrupted Corpse  
+
+### Platform  
+Android mobile (Ver : Jelly Bean or later)  
+
+### Used API/Assets  
+1. Photon Network (PUN 2)  
+2. A* Pathfinding Project (arongranberg.com/astar)
+
 # 개발자들의 한 일   
 
 ### Kim sm(김선민)  
@@ -7,9 +16,10 @@
 4. 무기 별 로직과 무기 구현(현재 권총, 산탄총, 석궁, 소총 구현됨.)
 5. 각자 작업한 작업물 병합해서 작동이 가능하게 구현
 6. Photon API를 이용하여 멀티플레이가 가능하도록 구현
+7. A* Pathfinding Project를 이용하여 좀비들의 이동 AI 구현 
 
 ### 김기욱  
-1. 기초적인 좀비 AI 제작
+1. 좀비 AI(여러 대상 개체 중 하나를 고르는 AI) 제작
 2. 각 branch의 코드를 수정해서, 작동이 가능하게 구현
 3. 몬스터 관련 스크립트 담당
 
