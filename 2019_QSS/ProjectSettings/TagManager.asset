@@ -11,6 +11,7 @@ TagManager:
   - Structures
   - Enemy
   - BulletOrVolt
+  - Wall
   layers:
   - Default
   - TransparentFX

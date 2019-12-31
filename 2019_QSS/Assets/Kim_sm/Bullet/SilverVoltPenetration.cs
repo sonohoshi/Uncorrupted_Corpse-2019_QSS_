@@ -11,10 +11,8 @@ public class SilverVoltPenetration : MonoBehaviour
         {
             penetrationSize -= collision.attachedRigidbody.mass;
 
-            if (penetrationSize <= 0)
-            {
-                gameObject.SetActive(false);
-            }
+            if (penetrationSize <= 0) gameObject.SetActive(false);
         }
+        if(collision.gameObject.CompareTag("Wall")) gameObject.SetActive(false);
     }
 }

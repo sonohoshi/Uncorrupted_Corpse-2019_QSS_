@@ -6,16 +6,6 @@ public class BulletPenetration : MonoBehaviour
 {
     private float bulletDamage;
     public BulletPenetration Instance { get; private set; }
-    /*private GameObject pistol;
-    private GameObject rifle;
-    private GameObject shotgun;
-
-    private void Awake()
-    {
-        pistol = GameObject.Find("Pistol");
-        rifle = GameObject.Find("Rifle");
-        shotgun = GameObject.Find("Shotgun");
-    }*/
 
     private void Awake()
     {
@@ -25,8 +15,8 @@ public class BulletPenetration : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
-            gameObject.SetActive(false);
+        if(collision.gameObject.CompareTag("Enemy")) gameObject.SetActive(false);
+        if(collision.gameObject.CompareTag("Wall")) gameObject.SetActive(false);
     }
 
     private void DamageInitialize()
