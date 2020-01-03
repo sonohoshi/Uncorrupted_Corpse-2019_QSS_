@@ -20,6 +20,7 @@ public class WeaponRotateAndFlip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(transform.position, Vector2.right, Color.cyan);
         LookZombieAndFlip();
     }
 
@@ -47,8 +48,8 @@ public class WeaponRotateAndFlip : MonoBehaviour
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        }else
+        }
+        else
         {
             Vector3 nulDir = PC.PoolInput();
             if (nulDir.x < 0 && !facingRight || nulDir.x >= 0 && facingRight)

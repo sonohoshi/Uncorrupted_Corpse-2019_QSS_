@@ -50,8 +50,6 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     public virtual void OnPointerUp(PointerEventData ped)
     {
         NormalattackVector = inputVector; // 현재 안씀
-        Debug.Log(NormalattackVector.x);
-        Debug.Log(NormalattackVector.y);
         inputVector = Vector3.zero; // 조이스틱에서 손을 뗄 경우, 벡터값을 초기화 해줌
         JoystickImg.rectTransform.anchoredPosition = Vector3.zero;
     }
