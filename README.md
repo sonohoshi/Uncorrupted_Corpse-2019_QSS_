@@ -1,5 +1,8 @@
 # Game Title : Uncorrupted Corpse  
 
+### Engine  
+Unity 2019.2.1f / 2D Project  
+
 ### Platform  
 Android mobile (Ver : Jelly Bean or later)  
 
