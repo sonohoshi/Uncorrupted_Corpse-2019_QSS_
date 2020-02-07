@@ -1,6 +1,6 @@
 # Game Title : Uncorrupted Corpse  
 
-### Develope Engine  
+### Develop Engine  
 Unity 2019.2.1f / 2D Project  
 
 ### Platform  
