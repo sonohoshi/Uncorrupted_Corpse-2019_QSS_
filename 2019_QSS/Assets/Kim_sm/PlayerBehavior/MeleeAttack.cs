@@ -32,7 +32,7 @@ public class MeleeAttack : MonoBehaviour
         {
             isMoving = true;
             coolDown = 0f;
-            Attack.SetReloadTime(2f);
+            AttackBTN.SetReloadTime(2f);
         }
     }
 
