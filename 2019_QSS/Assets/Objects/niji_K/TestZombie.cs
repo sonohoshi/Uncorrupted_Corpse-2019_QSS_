@@ -63,6 +63,7 @@ public class TestZombie : Zombie
         {
             dir = target.transform.position - transform.position;
             GameObject obj = Physics2D.Raycast(transform.position, dir, Mathf.Infinity, 1 << 12).transform.gameObject;
+            Debug.Log(obj);
             if (obj != target)
             {
                 float angle = Random.Range(0, 2 * Mathf.PI);

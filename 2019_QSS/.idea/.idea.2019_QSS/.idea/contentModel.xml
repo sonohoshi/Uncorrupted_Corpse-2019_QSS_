@@ -46,6 +46,7 @@
               <e p="Joystick.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
               <e p="ReloadEffect.cs" t="Include" />
+              <e p="SelectWeapon.cs" t="Include" />
             </e>
           </e>
           <e p="Weapon" t="Include">

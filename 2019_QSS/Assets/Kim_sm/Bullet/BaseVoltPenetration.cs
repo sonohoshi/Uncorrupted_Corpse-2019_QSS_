@@ -22,16 +22,16 @@ public class BaseVoltPenetration : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DamageInitialize();
     }
 
     public void SetPenetrationSize()
     {
         penetrationSize = 30;
     }
-    private void DamageInitialize()
+    
+    public void DamageInitialize(float damage)
     {
-        bulletDamage = 50f;
+        bulletDamage = damage;
     }
 
     public float GetBulletDamage()

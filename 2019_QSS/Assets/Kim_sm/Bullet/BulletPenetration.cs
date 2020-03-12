@@ -10,7 +10,6 @@ public class BulletPenetration : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DamageInitialize();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,13 +18,9 @@ public class BulletPenetration : MonoBehaviour
         if(collision.gameObject.CompareTag("Wall")) gameObject.SetActive(false);
     }
 
-    private void DamageInitialize()
+    public void DamageInitialize(float damage)
     {
-        Debug.Log(gameObject.name);
-        if (gameObject.name.Equals("BaseBullet(Clone)"))
-            bulletDamage = 10f + 5f;
-        else if (gameObject.name.Equals("SilverBullet(Clone)"))
-            bulletDamage = 10f + 10f;
+        bulletDamage = damage;
         Debug.Log("Bullet Damage : " + bulletDamage);
     }
 

@@ -10,8 +10,9 @@ public class WeaponShotgun : Weapon
     private int dirBullet;
     
     private readonly float reloadTime = 2f;
-    private readonly int maxBullet = 20;
+    private readonly int maxBullet = 5;
     private readonly float fireDelay = 1f;
+    private readonly float weaponDamage = 10f;
 
     private Transform bulletLocation;
     private Transform gunRotation;
@@ -25,26 +26,39 @@ public class WeaponShotgun : Weapon
 
     public override void WeaponAttack(BulletManager.BulletType bulletType)
     {
-        StartCoroutine(AttackDelayManage());
-        if (!isReloading && !isShotting)
+        Debug.Log(isReloading);
+        Debug.Log(isShotting);
+        if (!isReloading && !isShotting && dirBullet > 0)
         {
+            List<Transform> bulletList;
             switch (bulletType)
             {
                 case BulletManager.BulletType.Base:
                     BaseBulletPool.Initalize(bulletLocation,gunRotation);
-                    BaseBulletPool.PoolingBullet();
+                    bulletList = BaseBulletPool.AddBullet();
+                    foreach (var t in bulletList)
+                    {
+                        var bullet = t.GetComponent<BulletPenetration>();
+                        bullet.DamageInitialize(weaponDamage);
+                    }
                     break;
                 case BulletManager.BulletType.Silver:
                     SilverBulletPool.Initalize(bulletLocation,gunRotation);
-                    SilverBulletPool.PoolingBullet();
+                    bulletList = SilverBulletPool.AddBullet();
+                    foreach (var t in bulletList)
+                    {
+                        var bullet = t.GetComponent<BulletPenetration>();
+                        bullet.DamageInitialize(weaponDamage + 5f);
+                    }
                     break;
             }
         }
 
-        if (dirBullet <= 0)
+        else if (dirBullet <= 0)
         {
             StartCoroutine(ReloadDelayManage());
         }
+        StartCoroutine(AttackDelayManage());
     }
 
     public override IEnumerator ReloadDelayManage()

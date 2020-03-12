@@ -12,6 +12,7 @@ public class WeaponPistol : Weapon
     private readonly float reloadTime = 1f;
     private readonly int maxBullet = 15;
     private readonly float fireDelay = 0.2f;
+    private readonly float weaponDamage = 10f;
 
     private Transform bulletLocation;
     private Transform gunRotation;
@@ -25,26 +26,31 @@ public class WeaponPistol : Weapon
 
     public override void WeaponAttack(BulletManager.BulletType bulletType)
     {
-        StartCoroutine(AttackDelayManage());
-        if (!isReloading && !isShotting)
+        if (!isReloading && !isShotting && dirBullet > 0)
         {
+            BulletPenetration bullet;
             switch (bulletType)
             {
                 case BulletManager.BulletType.Base:
                     BaseBulletPool.Initalize(bulletLocation,gunRotation);
-                    BaseBulletPool.PoolingBullet();
+                    bullet = BaseBulletPool.PoolingBullet().GetComponent<BulletPenetration>();
+                    bullet.DamageInitialize(weaponDamage);
                     break;
                 case BulletManager.BulletType.Silver:
                     SilverBulletPool.Initalize(bulletLocation,gunRotation);
-                    SilverBulletPool.PoolingBullet();
+                    bullet = SilverBulletPool.PoolingBullet().GetComponent<BulletPenetration>();
+                    bullet.DamageInitialize(weaponDamage + 5f);
                     break;
             }
+
+            dirBullet--;
         }
 
         else if (dirBullet <= 0)
         {
             StartCoroutine(ReloadDelayManage());
         }
+        StartCoroutine(AttackDelayManage());
     }
 
     public override IEnumerator ReloadDelayManage()
