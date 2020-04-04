@@ -29,6 +29,10 @@ public class TestZombie : Zombie
             Move(dir);
         time_count += Time.deltaTime;
         attack_delay += Time.deltaTime;
+        if (HP <= 0)
+        {
+            ResultWindow.DeadZombie();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +44,6 @@ public class TestZombie : Zombie
             if (collision.gameObject.GetComponent<BaseVoltPenetration>() || collision.gameObject.GetComponent<SilverVoltPenetration>())
                 gameObject.GetComponent<Zombie>().Attacked(collision.gameObject.GetComponent<BaseVoltPenetration>().GetBulletDamage());
         }
-        
     }
 
     private void OnTriggerStay2D(Collider2D collision)

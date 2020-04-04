@@ -7,7 +7,7 @@ public static class BaseBulletPool
 {
     private static List<BulletManager.BulletInfo> bullets = new List<BulletManager.BulletInfo>();
     private static readonly BulletManager.BulletType type = BulletManager.BulletType.Base;
-    private static readonly float LiveTime = 0.5f; // 대충 10미터라고 잡아보자.
+    private static readonly float LiveTime = 0.5f;
     private static Transform BulletLocation;
     private static Transform GunRotation;
     private static Vector3 moveVector = new Vector3(0, 35, 0);

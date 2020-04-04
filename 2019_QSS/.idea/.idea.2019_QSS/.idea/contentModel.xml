@@ -40,12 +40,17 @@
           <e p="SceneManage" t="Include">
             <e p="SceneChanger.cs" t="Include" />
           </e>
+          <e p="Turret" t="Include">
+            <e p="TurretFire.cs" t="Include" />
+            <e p="TurretRotate.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="Scripts" t="Include">
               <e p="HPSlider.cs" t="Include" />
               <e p="Joystick.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
               <e p="ReloadEffect.cs" t="Include" />
+              <e p="ResultWindow.cs" t="Include" />
               <e p="SelectWeapon.cs" t="Include" />
             </e>
           </e>

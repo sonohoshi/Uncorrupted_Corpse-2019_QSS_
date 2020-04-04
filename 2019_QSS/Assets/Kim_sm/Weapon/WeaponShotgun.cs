@@ -52,6 +52,8 @@ public class WeaponShotgun : Weapon
                     }
                     break;
             }
+
+            dirBullet--;
         }
 
         else if (dirBullet <= 0)
