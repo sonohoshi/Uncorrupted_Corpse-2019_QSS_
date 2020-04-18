@@ -6,9 +6,11 @@ public class ZombieSpawner : MonoBehaviour
 {
     public float time_count = 0;
     public GameObject[] zombie; //생성할 좀비 목록
+    public ResultWindow resultWindow;
 
     //테스트로 wave 10까지만
     private static bool isStarted = false;
+    private static bool isEnded = false;
     private static int[] wave_zombie_count = { 0, 20, 20, 25, 50, 60, 70, 80, 90, 100, 150 };
     private static int[] wave_spawn_speed = { 0, 5, 5, 5, 5, 8, 5, 5, 5, 5, 8};
     private static int[] wave_rest_time = { 0, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
@@ -31,6 +33,11 @@ public class ZombieSpawner : MonoBehaviour
         if (isStarted)
         {
             if (zombie_count == 0) {
+                if (wave == 10 && !isEnded)
+                {
+                    resultWindow.GameEnd(false);
+                    isEnded = true;
+                }
                 if (FindObjectOfType<Zombie>() == null) {
                     time_count += Time.deltaTime;
                     rest = true;

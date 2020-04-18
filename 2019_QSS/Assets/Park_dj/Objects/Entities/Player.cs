@@ -6,6 +6,7 @@ public class Player : Entity
 {
     private float BasePoint;
     private float DistWeight;
+    public ResultWindow resultWindow;
     void Start()
     {
         Begin(500, 5, 5, 10, 30, 1);
@@ -50,6 +51,10 @@ public class Player : Entity
     public void Attacked(float atk)
     {
         HP -= atk - DP;
-        if (HP <= 0) { Destroy(transform.parent.gameObject); }
+        if (HP <= 0)
+        {
+            resultWindow.GameEnd(true);
+            Destroy(transform.parent.gameObject);
+        }
     }
 }
